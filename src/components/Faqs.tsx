@@ -81,7 +81,7 @@ export default function Faqs() {
                   onClick={() => toggleFAQ(index)}
                   className="cursor-pointer w-full flex items-center justify-between py-6 text-left focus:outline-none group"
                 >
-                  <span className="font-display text-[15px] md:text-base text-white/90 group-hover:text-white transition-colors duration-200">
+                  <span className="font-display font-normal text-sm md:text-lg text-white">
                     {faq.question}
                   </span>
 
@@ -112,7 +112,7 @@ export default function Faqs() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="font-display font-normal text-[#a1a1a1] text-sm md:text-[15px] leading-relaxed pr-8">
+                    <p className="font-display font-normal text-[#B3B3B3] text-sm md:text-lg leading-relaxed pr-8">
                       {faq.answer}
                     </p>
                   </div>
