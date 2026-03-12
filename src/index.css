@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Walsheim';
+  src: url('./assets/fonts/GT-Walsheim-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Walsheim';
+  src: url('./assets/fonts/GT-Walsheim-Medium-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Option A: Override the default sans font so it applies to EVERYTHING automatically */
+  /* --font-sans: 'Walsheim', ui-sans-serif, system-ui, sans-serif; */
+
+  /* Option B: Create a specific utility class like `font-display` */
+  --font-display: 'Walsheim', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+@keyframes loader-dash {
+  0% { 
+    background-position: 100% 0; 
+  }
+  100% { 
+    background-position: 0% 0; 
+  }
+}
+
+/* @keyframes comet {
+  0% { 
+    width: 15%; 
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% { 
+    width: 100%;
+    opacity: 0; 
+  }
+} */
