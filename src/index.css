@@ -28,6 +28,10 @@
   width: 0px;
 }
 
+body {
+  background-color: #000000;
+}
+
 @keyframes loader-dash {
   0% { 
     background-position: 100% 0; 
@@ -36,21 +40,3 @@
     background-position: 0% 0; 
   }
 }
-
-/* @keyframes comet {
-  0% { 
-    width: 15%; 
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    width: 100%;
-    opacity: 1;
-  }
-  100% { 
-    width: 100%;
-    opacity: 0; 
-  }
-} */
