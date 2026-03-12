@@ -45,9 +45,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 mb-6 md:mt-10 w-full h-0.5 bg-[repeating-linear-gradient(90deg,#1E1E1E_0px,#1E1E1E_12px,transparent_12px,transparent_20px)] opacity-50"></div>
+        {/* <div className="mt-8 mb-6 md:mt-10 w-full h-0.5 bg-[repeating-linear-gradient(90deg,#1E1E1E_0px,#1E1E1E_12px,transparent_12px,transparent_20px)] opacity-50"></div> */}
 
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mt-8 md:mt-10 pt-6 mb-6 border-t border-dashed border-[#1E1E1E]">
           <span>
             <p className="font-display font-regular text-xs md:text-base text-[#B3B3B3]">
               &copy; {new Date().getFullYear()} Layouts

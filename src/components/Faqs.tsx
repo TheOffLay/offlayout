@@ -51,7 +51,7 @@ export default function Faqs() {
   };
   return (
     <>
-      <section className="max-w-300 mx-auto px-6 mt-16 md:mt-32">
+      <section className="max-w-300 mx-auto px-6">
         <div className="flex items-center justify-center p-8 h-100 md:h-150 2xl:h-200 w-full bg-[#E2E2E2] border-2 border-white rounded-2xl">
           <img
             src="./assets/work/Home page.svg"
@@ -60,66 +60,75 @@ export default function Faqs() {
           />
         </div>
 
-        <h2 className="font-display font-medium text-center text-3xl md:text-6xl">
-          Frequently Asked
-          <br /> Questions
-        </h2>
-        <p className="mt-4 text-[#B3B3B3] font-display font-normal text-center text-xs md:text-lg">
-          Clear answers help teams move faster. Below are a few things people
-          usually want to know before getting started.
-        </p>
+        <div className="pt-7 md:pt-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto">
+          <h2 className="font-display font-medium text-center text-3xl md:text-6xl">
+            Frequently Asked
+            <br /> Questions
+          </h2>
+          <p className="mt-4 text-[#B3B3B3] font-display font-normal text-center text-xs md:text-lg md:max-w-125 mx-auto">
+            Clear answers help teams move faster. Below are a few things people
+            usually want to know before getting started.
+          </p>
 
-        {/* The FAQ List */}
-        <div className="flex flex-col border-t border-white/5 w-full max-w-183.5 mt-6 md:mt-10 mx-auto">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index;
+          {/* The FAQ List */}
+          <div className="flex flex-col border-t border-[#1E1E1E] w-full max-w-183.5 mt-6 md:mt-10 mx-auto">
+            {faqs.map((faq, index) => {
+              const isOpen = openIndex === index;
 
-            return (
-              <div key={index} className="border-b border-white/5">
-                {/* Question / Clickable Header */}
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="cursor-pointer w-full flex items-center justify-between py-6 text-left focus:outline-none group"
-                >
-                  <span className="font-display font-normal text-sm md:text-lg text-white">
-                    {faq.question}
-                  </span>
-
-                  {/* Chevron Icon */}
-                  <svg
-                    className={`w-4 h-4 text-white/50 transition-transform duration-300 ease-in-out ${
-                      isOpen ? "rotate-180" : "rotate-0"
-                    }`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
+              return (
+                <div key={index} className="border-b border-[#1E1E1E]">
+                  {/* Question / Clickable Header */}
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="cursor-pointer w-full flex items-center justify-between px-4 py-6 text-left focus:outline-none group"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
+                    <span className="font-display font-normal text-sm md:text-lg text-white">
+                      {faq.question}
+                    </span>
 
-                {/* Answer / Animated Body */}
-                <div
-                  className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100 pb-6"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <p className="font-display font-normal text-[#B3B3B3] text-sm md:text-lg leading-relaxed pr-8">
-                      {faq.answer}
-                    </p>
+                    {/* Chevron Icon */}
+                    <svg
+                      className={`w-4 h-4 text-white/50 transition-transform duration-300 ease-in-out ${
+                        isOpen ? "rotate-180" : "rotate-0"
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Answer / Animated Body */}
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      isOpen
+                        ? "grid-rows-[1fr] opacity-100 pb-6"
+                        : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="px-4 font-display font-normal text-[#B3B3B3] text-sm md:text-lg leading-relaxed pr-8">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+
+          <div className="mt-5 mb-7 md:mt-10 md:mb-14 flex items-center justify-center">
+          <button className="flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+            <span className="w-2 h-2 rounded-full bg-[#22C55E]"></span>
+            Book a consultation
+          </button>
+          </div>
         </div>
       </section>
     </>
