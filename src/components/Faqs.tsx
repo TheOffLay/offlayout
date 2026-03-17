@@ -50,8 +50,8 @@ export default function Faqs() {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <>
-      <section className="max-w-300 mx-auto px-6">
+    <main className="px-2">
+      <section className="max-w-290 mx-auto px-2 pt-2 rounded-2xl bg-[#0A0A0A]">
         <div className="flex items-center justify-center p-8 h-100 md:h-150 2xl:h-200 w-full bg-[#E2E2E2] border-2 border-white rounded-2xl">
           <img
             src="./assets/work/Home page.svg"
@@ -60,7 +60,7 @@ export default function Faqs() {
           />
         </div>
 
-        <div className="pt-7 md:pt-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto">
+        <div className="pt-7 md:pt-14 pb-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto">
           <h2 className="font-display font-medium text-center text-3xl md:text-6xl">
             Frequently Asked
             <br /> Questions
@@ -123,7 +123,7 @@ export default function Faqs() {
             })}
           </div>
 
-          <div className="mt-5 mb-7 md:mt-10 md:mb-14 flex items-center justify-center">
+          <div className="mt-5 md:mt-10 flex items-center justify-center">
           <button className="flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
             <span className="w-2 h-2 rounded-full bg-[#22C55E]"></span>
             Book a consultation
@@ -131,6 +131,6 @@ export default function Faqs() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
