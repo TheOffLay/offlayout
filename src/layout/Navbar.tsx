@@ -1,11 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router";
 import Menu from "/assets/navbar/menu.svg";
+import Cancel from "/assets/navbar/cancel.svg";
 import Ellipse from "/assets/navbar/ellipse.svg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { hash } = useLocation();
+
+  // --- DRAG TO CLOSE STATE ---
+  const [dragY, setDragY] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const touchStartY = useRef(0);
 
   // Track the active section in state, defaulting to the URL hash or '#work'
   const [activeSection, setActiveSection] = useState(hash || "#work");
@@ -16,6 +22,18 @@ export default function Navbar() {
     { name: "About", path: "#about" },
     { name: "FAQs", path: "#faqs" },
   ];
+
+  // --- LOCK BACKGROUND SCROLL ---
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   // --- THE SCROLL HANDLER ---
   const handleScroll = (
@@ -74,7 +92,7 @@ export default function Navbar() {
           <img
             src="/assets/navbar/logo.svg"
             alt="Logo"
-            className="w-3 h-3 md:w-11 md:h-11"
+            className="w-10 h-10 md:w-11 md:h-11"
           />
         </div>
 
@@ -87,7 +105,6 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                // Call our new scroll handler
                 onClick={(e) => handleScroll(e, link.path)}
                 className={`relative text-base font-display flex flex-col items-center transition-opacity hover:opacity-100 cursor-pointer ${
                   isActive
@@ -121,9 +138,9 @@ export default function Navbar() {
 
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
             {isOpen ? (
-              <p className="w-6 h-6 text-white">X</p>
+              <img src={Cancel} alt="cancel-btn" className="w-6 h-6" />
             ) : (
-              <img src={Menu} alt="Menu" className="w-6 h-6" />
+              <img src={Menu} alt="menu-btn" className="w-6 h-6" />
             )}
           </button>
         </div>
@@ -135,30 +152,96 @@ export default function Navbar() {
         onClick={() => setIsOpen(false)}
       >
         <div
-          className={`absolute bottom-0 left-0 w-full bg-[#0d0d0d] rounded-t-2xl p-8 transition-transform duration-500 ease-out ${isOpen ? "translate-y-0" : "translate-y-full"}`}
+        // Removed Tailwind's translate/transition classes here, we handle it completely in the style prop now
+          className="absolute bottom-0 left-0 w-full bg-[#0A0A0A] rounded-t-2xl p-4"
+          style={{
+            transform: isOpen ? `translateY(${dragY}px)` : "translateY(100%)",
+            // If dragging, remove transition so it sticks to finger. If released, snap it nicely.
+            transition: isDragging ? "none" : "transform 0.4s cubic-bezier(0.32, 0.72, 0, 1)",
+          }}
           onClick={(e) => e.stopPropagation()}
+          
+          // --- FLUID SWIPE LOGIC ---
+          onTouchStart={(e) => {
+            touchStartY.current = e.touches[0].clientY;
+            setIsDragging(true);
+          }}
+          onTouchMove={(e) => {
+            const currentY = e.touches[0].clientY;
+            const diff = currentY - touchStartY.current;
+            // Only allow dragging downwards
+            if (diff > 0) {
+              setDragY(diff);
+            } else {
+              setDragY(0);
+            }
+          }}
+          onTouchEnd={() => {
+            setIsDragging(false);
+            // If they dragged down more than 100 pixels, consider it a close action
+            if (dragY > 100) {
+              setIsOpen(false);
+            }
+            // Always reset drag pixel count on release so it snaps back to 0
+            setDragY(0);
+          }}
         >
-          <div className="w-12 h-1 bg-white/20 rounded-full mx-auto mb-8" />
-
-          <div className="flex flex-col gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={(e) => {
-                  setIsOpen(false);
-                  // Call our new scroll handler here too!
-                  handleScroll(e, link.path);
-                }}
-                className="text-[clamp(16px,5vw,18px)] font-medium opacity-80"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="h-px bg-white/10 my-4" />
-            <button className="w-full bg-white text-black py-4 rounded-2xl font-semibold cursor-pointer">
+          {/* menu handle */}
+          <div className="w-12 h-1 bg-[#2A2A2A] rounded-full mx-auto mb-8" />
+          <div className="flex flex-col gap-2">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.path;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={(e) => {
+                    setIsOpen(false);
+                    handleScroll(e, link.path);
+                  }}
+                  className={`text-xl font-medium font-display ${isActive ? "opacity-100 font-medium" : "opacity-60 font-normal"}`}
+                >
+                  {link.name}
+                  {isActive && (
+                  <img
+                    src={Ellipse}
+                    alt=""
+                    className="w-2 h-2 absolute -bottom-3"
+                  />
+                )}
+                </Link>
+              );
+            })}
+            <div className="mt-4 space-y-1">
+              <p className="font-display font-normal text-sm">Connect</p>
+              <p className="text-[#B3B3B3] font-display font-normal text-sm">Email</p>
+              <p className="text-[#B3B3B3] font-display font-normal text-sm">X/Twiter</p>
+              <p className="text-[#B3B3B3] font-display font-normal text-sm">Telegram</p>
+            </div>
+            <button className="mt-4 cursor-pointer flex justify-center items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+              <span className="w-2 h-2 rounded-full animate-colorblink"></span>
               Book a consultation
             </button>
+
+            <div className="flex items-center justify-between my-4 pt-6 border-t border-dashed border-[#1E1E1E]">
+              <span>
+                <p className="font-display font-regular text-xs text-[#B3B3B3]">
+                  &copy; {new Date().getFullYear()} Layouts
+                </p>
+                <p className="font-display font-regular text-xs text-[#B3B3B3]">
+                  All rights reserved
+                </p>
+              </span>
+
+              <span>
+                <p className="font-display font-regular text-xs text-[#B3B3B3]">
+                  Created with &hearts; in Web3
+                </p>
+                <p className="text-end font-display font-regular text-xs text-[#B3B3B3]">
+                  Designed on Figma
+                </p>
+              </span>
+            </div>
           </div>
         </div>
       </div>

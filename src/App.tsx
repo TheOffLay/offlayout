@@ -2,7 +2,7 @@ import Approach from "./components/Approach";
 import Hero from "./components/Hero";
 import ProjectsGrid from "./components/Projects";
 import Templates from "./components/Templates";
-import Idea from "./components/Idea"
+import Idea from "./components/Idea";
 import Faqs from "./components/Faqs";
 
 export default function App() {

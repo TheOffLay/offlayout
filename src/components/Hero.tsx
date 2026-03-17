@@ -3,7 +3,7 @@
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[85vh] flex flex-col items-center justify-center px-6 overflow-hidden bg-black pt-20">
+    <section className="relative w-full min-h-[85vh] md:min-h-screen 2xl:min-h-[85vh] flex flex-col items-center justify-center px-6 overflow-hidden bg-black pt-20" id="work">
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
@@ -34,8 +34,8 @@ export default function Hero() {
         </p>
 
         {/* Action Button */}
-        <button className="flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
-          <span className="w-2 h-2 rounded-full bg-[#22C55E]"></span>
+        <button className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+          <span className="w-2 h-2 rounded-full animate-colorblink"></span>
           Book a consultation
         </button>
       </div>

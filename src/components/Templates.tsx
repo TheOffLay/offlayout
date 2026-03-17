@@ -11,7 +11,7 @@ const templateCards = [
 export default function Templates() {
   return (
     <>
-      <section className="max-w-300 mx-auto px-6 mt-16 md:mt-32">
+      <section className="max-w-300 mx-auto px-2 lg:px-6 mt-16 md:mt-32" id="templates">
         <h2 className="font-display font-medium text-3xl md:text-5xl">
           Templates built <br />
           to ship faster

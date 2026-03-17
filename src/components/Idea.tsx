@@ -1,7 +1,7 @@
 export default function Idea() {
   return (
-    <>
-      <section className="max-w-300 mx-auto px-6 mt-16 md:mt-32">
+    <main id="about">
+      <section className="max-w-300 mx-auto px-2 md:px-6 mt-16 md:mt-32">
         <h2 className="font-display font-medium text-center text-3xl md:text-6xl">
           From idea to
           <br /> product
@@ -15,7 +15,6 @@ export default function Idea() {
 
         <div className="mt-5 md:mt-10 2xl:mt-15 relative w-full h-75 md:h-125 2xl:h-130 overflow-hidden flex items-center justify-center">
           <div className="absolute top-0 left-0 w-full h-24 md:h-40 bg-linear-to-b from-black to-transparent z-10 pointer-events-none"></div>
-
           <img
             src="/assets/idea/designer.svg"
             alt="Barry badge"
@@ -53,7 +52,7 @@ export default function Idea() {
           />
         </div>
       </section>
-    </>
+    </main>
   );
 }
 
