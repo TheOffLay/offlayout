@@ -51,7 +51,7 @@ export default function Faqs() {
   };
   return (
     <main className="px-2">
-      <section className="max-w-290 mx-auto px-2 rounded-2xl bg-[#0A0A0A]">
+      <section className="max-w-290 mx-auto px-2 pt-2 rounded-2xl bg-[#0A0A0A]">
         <div className="flex items-center justify-center p-8 h-100 md:h-150 2xl:h-200 w-full bg-[#E2E2E2] border-2 border-white rounded-2xl">
           <img
             src="./assets/work/Home page.svg"
