@@ -86,7 +86,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#000000]">
-      <div className="max-w-300 mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-280 2xl:max-w-300 mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="">
           <img
@@ -100,13 +100,12 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8 text-[16px]">
           {navLinks.map((link) => {
             const isActive = activeSection === link.path;
-
             return (
               <Link
                 key={link.name}
                 to={link.path}
                 onClick={(e) => handleScroll(e, link.path)}
-                className={`relative text-base font-display flex flex-col items-center transition-opacity hover:opacity-100 cursor-pointer ${
+                className={`relative text-sm 2xl:text-base font-display flex flex-col items-center transition-opacity hover:opacity-100 cursor-pointer ${
                   isActive
                     ? "opacity-100 font-medium"
                     : "opacity-60 font-normal"
@@ -127,7 +126,7 @@ export default function Navbar() {
 
         {/* Action Button & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <button className="flex items-center gap-1 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black px-2 md:px-5 py-2 rounded-full text-xs md:text-base font-display font-medium cursor-pointer">
+          <button className="flex items-center gap-1 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black px-2 md:px-5 py-2 rounded-full text-xs md:text-sm 2xl:text-base font-display font-medium cursor-pointer">
             Get in touch
             <img
               src="./assets/navbar/arrow-black.svg"

@@ -1,4 +1,4 @@
-import Loader from "./Loader";
+import Loader from "../components/Loader";
 
 export default function ProjectsGrid() {
   const projects = [
@@ -41,7 +41,7 @@ export default function ProjectsGrid() {
   ];
 
   return (
-    <section className="max-w-300 mx-auto px-2 lg:px-6">
+    <section className="max-w-280 2xl:max-w-300 mx-auto px-2 lg:px-6">
       {/* Toggle tabs */}
       <div className="mb-4 md:mb-8 flex justify-center gap-5 items-center w-full">
         <span className="flex items-center px-3 py-2 rounded-full bg-[#1E1E1E] border border-[#2E2E2E] cursor-pointer">
@@ -50,7 +50,7 @@ export default function ProjectsGrid() {
             alt="Sync Icon"
             className="inline-block w-5 h-5 mr-1 opacity-50"
           />
-          <h2 className="font-display font-normal text-sm">All</h2>
+          <h2 className="font-display font-normal text-sm md:text-[15px] 2xl:text-base">All</h2>
         </span>
         <span className="flex items-center">
           <img
@@ -58,7 +58,7 @@ export default function ProjectsGrid() {
             alt="Smartphone Icon"
             className="inline-block w-5 h-5 mr-1 opacity-50"
           />
-          <h2 className="text-[#B3B3B3] font-display font-normal text-sm">
+          <h2 className="text-[#B3B3B3] font-display font-normal text-sm md:text-[15px] 2xl:text-base">
             Mobile
           </h2>
         </span>
@@ -68,7 +68,7 @@ export default function ProjectsGrid() {
             alt="Laptop Icon"
             className="inline-block w-5 h-5 mr-1 opacity-50"
           />
-          <h2 className="text-[#B3B3B3] font-display font-normal text-sm">
+          <h2 className="text-[#B3B3B3] font-display font-normal text-sm md:text-[15px] 2xl:text-base">
             Web
           </h2>
         </span>
@@ -79,10 +79,10 @@ export default function ProjectsGrid() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-[#111111] p-2 w-full max-w-164.5 h-[clamp(376px,45vw,706px)] rounded-2xl flex flex-col items-center justify-center"
+            className="bg-[#111111] p-2 w-full md:max-w-150 2xl:max-w-164.5 h-94 md:h-120 2xl:h-176.5 rounded-2xl flex flex-col items-center justify-center"
           >
             <div className="bg-[#1E1E1E] h-full w-full rounded-2xl flex flex-col items-center justify-center">
-              <div className="relative w-14 h-14 md:w-32 md:h-32 mb-3">
+              <div className="relative w-14 h-14 md:w-20 md:h-20 2xl:w-32 2xl:h-32 mb-3">
                 <img
                   src={project.image}
                   alt={`${project.name} Icon`}
@@ -95,11 +95,11 @@ export default function ProjectsGrid() {
               <p className="text-center font-display font-normal text-[#B3B3B3] text-xs md:text-sm">in progress...</p>
             </div>
             <div className="bg-[#171717] p-2 w-full flex items-center justify-between rounded-2xl mt-1">
-              <p className="font-display font-medium text-sm md:text-xl">
+              <p className="font-display font-medium text-sm md:text-base 2xl:text-xl">
                 {project.name}{" "}
                 <span className="text-[#7A7A7A]">/ {project.year}</span>
               </p>
-              <button className="flex items-center bg-transparent border border-[#2E2E2E] text-[#B3B3B3] rounded-full p-2 font-display font-medium text-xs md:text-base">
+              <button className="flex items-center bg-transparent border border-[#2E2E2E] text-[#B3B3B3] rounded-full p-2 font-display font-medium text-xs md:text-sm 2xl:text-base">
                 View project
                 <img src="/assets/work/arrow-white.svg" alt="" />
               </button>

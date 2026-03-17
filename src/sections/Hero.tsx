@@ -28,13 +28,13 @@ export default function Hero() {
         </h1>
 
         {/* Subheading */}
-        <p className="font-display font-normal text-[#a1a1a1] text-[clamp(14px,3vw,20px)] leading-relaxed  md:max-w-140 mx-auto mb-10">
+        <p className="font-display font-normal text-[#a1a1a1] text-sm md:text-base 2xl:text-xl leading-relaxed md:max-w-140 mx-auto mb-10">
           Layouts is a product lab focused on execution, designing and building
           web and Web3 products that are ready to launch.
         </p>
 
         {/* Action Button */}
-        <button className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+        <button className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
           <span className="w-2 h-2 rounded-full animate-colorblink"></span>
           Book a consultation
         </button>

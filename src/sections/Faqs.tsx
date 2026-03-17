@@ -51,8 +51,8 @@ export default function Faqs() {
   };
   return (
     <main className="px-2">
-      <section className="max-w-290 mx-auto px-2 pt-2 rounded-2xl bg-[#0A0A0A]">
-        <div className="flex items-center justify-center p-8 h-100 md:h-150 2xl:h-200 w-full bg-[#E2E2E2] border-2 border-white rounded-2xl">
+      <section className="max-w-270 2xl:max-w-290 mx-auto px-2 pt-2 rounded-2xl bg-[#0A0A0A]">
+        <div className="flex items-center justify-center p-8 h-100 md:h-130 2xl:h-200 w-full bg-[#E2E2E2] border-2 border-white rounded-2xl">
           <img
             src="./assets/work/Home page.svg"
             alt="Home page layout"
@@ -61,11 +61,11 @@ export default function Faqs() {
         </div>
 
         <div className="pt-7 md:pt-14 pb-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto" id="faqs">
-          <h2 className="font-display font-medium text-center text-3xl md:text-6xl">
+          <h2 className="font-display font-medium text-center text-3xl md:text-5xl 2xl:text-6xl">
             Frequently Asked
             <br /> Questions
           </h2>
-          <p className="mt-4 text-[#B3B3B3] font-display font-normal text-center text-xs md:text-lg md:max-w-125 mx-auto">
+          <p className="mt-4 text-[#B3B3B3] font-display font-normal text-center text-xs md:text-base 2xl:text-lg md:max-w-125 mx-auto">
             Clear answers help teams move faster. Below are a few things people
             usually want to know before getting started.
           </p>
@@ -82,7 +82,7 @@ export default function Faqs() {
                     onClick={() => toggleFAQ(index)}
                     className="cursor-pointer w-full flex items-center justify-between px-4 py-6 text-left focus:outline-none group"
                   >
-                    <span className="font-display font-normal text-sm md:text-lg text-white">
+                    <span className="font-display font-normal text-sm md:text-base 2xl:text-lg text-white">
                       {faq.question}
                     </span>
 
@@ -113,7 +113,7 @@ export default function Faqs() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-4 font-display font-normal text-[#B3B3B3] text-sm md:text-lg leading-relaxed pr-8">
+                      <p className="px-4 font-display font-normal text-[#B3B3B3] text-sm md:text-base 2xl:text-lg leading-relaxed pr-8">
                         {faq.answer}
                       </p>
                     </div>
@@ -124,7 +124,7 @@ export default function Faqs() {
           </div>
 
           <div className="mt-5 md:mt-10 flex items-center justify-center">
-          <button className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+          <button className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
             <span className="w-2 h-2 rounded-full animate-colorblink"></span>
             Book a consultation
           </button>
