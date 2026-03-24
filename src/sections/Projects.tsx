@@ -41,7 +41,7 @@ export default function ProjectsGrid() {
   ];
 
   return (
-    <section className="max-w-280 2xl:max-w-300 mx-auto px-2 lg:px-6">
+    <section className="max-w-280 2xl:max-w-300 mx-auto px-4 lg:px-6">
       {/* Toggle tabs */}
       <div className="mb-4 md:mb-8 flex justify-center gap-5 items-center w-full">
         <span className="flex items-center px-3 py-2 rounded-full bg-[#1E1E1E] border border-[#2E2E2E] cursor-pointer">
