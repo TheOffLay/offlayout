@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 import App from "./App";
 import Layout from "./layout/Layout";
+import FullStudy from "./pages/fullStudy";
 // import ConsultationModal from "./components/ConsultModal";
 
 const router = createBrowserRouter([
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <App /> },
+      { path: "/full-study", element: <FullStudy /> },
       // { path: "/modal", element: <ConsultationModal /> }
     ],
   },

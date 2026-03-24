@@ -1,13 +1,17 @@
-import { Outlet } from 'react-router'
-import Navbar from './Navbar';
+import { Outlet, useLocation } from "react-router";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export default function Layout() {
+  const location = useLocation();
+  const hiddenRoutes = ["/full-study", "/modal"];
+  const hideNavAndFooter = hiddenRoutes.includes(location.pathname);
+
   return (
     <div className="bg-[#000000] min-h-screen text-white">
-      <Navbar />
+      {!hideNavAndFooter && <Navbar />}
       <Outlet />
-      <Footer />
+      {!hideNavAndFooter && <Footer />}
     </div>
   );
 }

@@ -50,7 +50,9 @@ export default function ProjectsGrid() {
             alt="Sync Icon"
             className="inline-block w-5 h-5 mr-1 opacity-50"
           />
-          <h2 className="font-display font-normal text-sm md:text-[15px] 2xl:text-base">All</h2>
+          <h2 className="font-display font-normal text-sm md:text-[15px] 2xl:text-base">
+            All
+          </h2>
         </span>
         <span className="flex items-center">
           <img
@@ -74,12 +76,12 @@ export default function ProjectsGrid() {
         </span>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center">
+      {/* Cards md:max-w-15 0 2xl: */}
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-[#111111] p-2 w-full md:max-w-150 2xl:max-w-164.5 h-94 md:h-120 2xl:h-176.5 rounded-2xl flex flex-col items-center justify-center"
+            className="bg-[#111111] p-2 w-full max-w-164.5 h-94 md:h-120 2xl:h-176.5 rounded-2xl flex flex-col items-center justify-center"
           >
             <div className="bg-[#1E1E1E] h-full w-full rounded-2xl flex flex-col items-center justify-center">
               <div className="relative w-14 h-14 md:w-20 md:h-20 2xl:w-32 2xl:h-32 mb-3">
@@ -92,7 +94,9 @@ export default function ProjectsGrid() {
                   <Loader />
                 </div>
               </div>
-              <p className="text-center font-display font-normal text-[#B3B3B3] text-xs md:text-sm">in progress...</p>
+              <p className="text-center font-display font-normal text-[#B3B3B3] text-xs md:text-sm">
+                in progress...
+              </p>
             </div>
             <div className="bg-[#171717] p-2 w-full flex items-center justify-between rounded-2xl mt-1">
               <p className="font-display font-medium text-sm md:text-base 2xl:text-xl">
@@ -100,6 +104,42 @@ export default function ProjectsGrid() {
                 <span className="text-[#7A7A7A]">/ {project.year}</span>
               </p>
               <button className="flex items-center bg-transparent border border-[#2E2E2E] text-[#B3B3B3] rounded-full p-2 font-display font-medium text-xs md:text-sm 2xl:text-base">
+                View project
+                <img src="/assets/work/arrow-white.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        ))}
+      </div> */}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="bg-[#111111] p-2 w-full max-w-164.5 h-94 md:h-120 2xl:h-176.5 rounded-2xl flex flex-col items-center justify-center"
+          >
+            <div className="bg-transparent h-full w-full rounded-2xl flex flex-col items-center justify-center">
+              <div className="w-16 h-20 md:w-20 md:h-24 mb-3 flex flex-col items-center justify-between opacity-50">
+                <div className="w-full h-[80%] border-6 md:border-8 border-[#7A7A7A] rounded-xl md:rounded-2xl 2xl:rounded-3xl flex items-end justify-center pb-1 md:pb-2 2xl:pb-3">
+                  <div className="w-9 h-1.75 md:w-12 md:h-2.75">
+                    <Loader />
+                  </div>
+                </div>
+                {/* bottom bar */}
+                <div className="w-9 h-1.5 md:w-12 md:h-2 bg-[#7A7A7A] rounded-full"></div>
+              </div>
+
+              <p className="text-center font-display font-normal text-[#B3B3B3] text-xs md:text-sm">
+                in progress...
+              </p>
+            </div>
+
+            <div className="bg-[#171717] p-2 w-full flex items-center justify-between rounded-2xl mt-1">
+              <p className="font-display font-medium text-sm md:text-base 2xl:text-xl">
+                {project.name}{" "}
+                <span className="text-[#7A7A7A]">/ {project.year}</span>
+              </p>
+              <button className="flex items-center bg-transparent border border-[#2E2E2E] text-[#B3B3B3] rounded-full p-2 font-display font-medium text-xs md:text-sm 2xl:text-base cursor-pointer">
                 View project
                 <img src="/assets/work/arrow-white.svg" alt="" />
               </button>
