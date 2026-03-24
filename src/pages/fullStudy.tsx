@@ -1,17 +1,21 @@
+import { Link } from "react-router";
+
 export default function FullStudy() {
   return (
     <>
       <header className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
-        <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] border-2 border-[#2E2E2E] rounded-full cursor-pointer">
-          <img
-            src="/assets/full/arrow-left.svg"
-            alt="Go back"
-            className="w-4 h-4 md:w-5 md:h-5"
-          />
-          <span className="hidden md:block text-white font-display font-medium text-base">
-            Go home
-          </span>
-        </button>
+        <Link to="/">
+          <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] border-2 border-[#2E2E2E] rounded-full cursor-pointer">
+            <img
+              src="/assets/full/arrow-left.svg"
+              alt="Go back"
+              className="w-4 h-4 md:w-5 md:h-5"
+            />
+            <span className="hidden md:block text-white font-display font-medium text-base">
+              Go home
+            </span>
+          </button>
+        </Link>
 
         <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer">
           View Live
@@ -219,16 +223,16 @@ export default function FullStudy() {
             </button>
           </div>
           <div className="mt-5 md:mt-10 2xl:mt-15 relative w-full h-75 md:h-125 2xl:h-130 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-24 md:h-40 bg-linear-to-b from-black to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 w-full h-24 md:h-40 bg-linear-to-b from-black to-transparent z-10 pointer-events-none"></div>
             <video
-            src="https://res.cloudinary.com/dxhw8m6wo/video/upload/v1773330408/layout-labs-animation_pam3f7.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className=" w-full h-full object-cover pointer-events-none"
-          />
-        </div>
+              src="https://res.cloudinary.com/dxhw8m6wo/video/upload/v1773330408/layout-labs-animation_pam3f7.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className=" w-full h-full object-cover pointer-events-none"
+            />
+          </div>
         </div>
       </section>
     </>

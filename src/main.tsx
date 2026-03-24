@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import Layout from "./layout/Layout";
 import FullStudy from "./pages/fullStudy";
+import HalfStudy from "./pages/halfStudy";
 // import ConsultationModal from "./components/ConsultModal";
 
 const router = createBrowserRouter([
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <App /> },
       { path: "/full-study", element: <FullStudy /> },
+      { path: "/half-study", element: <HalfStudy /> },
       // { path: "/modal", element: <ConsultationModal /> }
     ],
   },

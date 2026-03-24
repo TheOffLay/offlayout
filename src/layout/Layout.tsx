@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export default function Layout() {
   const location = useLocation();
-  const hiddenRoutes = ["/full-study", "/modal"];
+  const hiddenRoutes = ["/full-study", "/half-study"];
   const hideNavAndFooter = hiddenRoutes.includes(location.pathname);
 
   return (
