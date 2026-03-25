@@ -1,7 +1,9 @@
-
+import { useModal } from "../context/ModalContext";
 
 
 export default function Hero() {
+  const { openModal } = useModal();
+
   return (
     <section className="relative w-full min-h-[85vh] md:min-h-screen 2xl:min-h-[85vh] flex flex-col items-center justify-center px-6 overflow-hidden bg-black pt-20" id="work">
       <div
@@ -34,7 +36,7 @@ export default function Hero() {
         </p>
 
         {/* Action Button */}
-        <button className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+        <button onClick={openModal} className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
           <span className="w-2 h-2 rounded-full animate-colorblink"></span>
           Book a consultation
         </button>

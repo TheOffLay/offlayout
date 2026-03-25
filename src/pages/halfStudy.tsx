@@ -1,6 +1,8 @@
 import { Link } from "react-router";
+import { useModal } from "../context/ModalContext";
 
 export default function HalfStudy() {
+  const { openModal } = useModal();
   return (
     <>
       <header className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
@@ -101,7 +103,7 @@ export default function HalfStudy() {
             Build with us
           </h2>
           <div className="flex items-center justify-center mt-4 md:mt-8">
-            <button className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+            <button onClick={openModal} className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>
               Book a consultation
             </button>
