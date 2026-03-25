@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Walsheim';
-  src: url('/assets/fonts/GT-Walsheim-Regular-Trial.otf') format('opentype');
+  font-family: "Walsheim";
+  src: url("/assets/fonts/GT-Walsheim-Regular-Trial.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Walsheim';
-  src: url('/assets/fonts/GT-Walsheim-Medium-Trial.otf') format('opentype');
+  font-family: "Walsheim";
+  src: url("/assets/fonts/GT-Walsheim-Medium-Trial.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -21,7 +21,7 @@
   /* --font-sans: 'Walsheim', ui-sans-serif, system-ui, sans-serif; */
 
   /* Option B: Create a specific utility class like `font-display` */
-  --font-display: 'Walsheim', sans-serif;
+  --font-display: "Walsheim", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -38,26 +38,41 @@ body {
 }
 
 @keyframes loader-dash {
-  0% { 
-    background-position: 100% 0; 
+  0% {
+    background-position: 100% 0;
   }
-  100% { 
-    background-position: 0% 0; 
+  100% {
+    background-position: 0% 0;
   }
 }
 
 @keyframes colorblink {
-  0% { 
-    background-color: #22C55E;
+  0% {
+    background-color: #22c55e;
   }
-  50% { 
-     background-color: #000000; 
+  50% {
+    background-color: #000000;
   }
-  100% { 
-     background-color: #22C55E;
+  100% {
+    background-color: #22c55e;
   }
 }
 
 .animate-colorblink {
   animation: colorblink 1.5s ease-in-out infinite;
+}
+
+/* Defeat browser autofill styles for dark mode */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* Use an inset box-shadow to cover the white background with your dark gray */
+  -webkit-box-shadow: 0 0 0 50px #111111 inset !important;
+
+  /* Force the text to remain white */
+  -webkit-text-fill-color: white !important;
+
+  /* Keep the typing cursor white */
+  caret-color: white !important;
 }

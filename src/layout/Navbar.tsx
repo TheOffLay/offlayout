@@ -3,10 +3,13 @@ import { Link, useLocation } from "react-router";
 import Menu from "/assets/navbar/menu.svg";
 import Cancel from "/assets/navbar/cancel.svg";
 import Ellipse from "/assets/navbar/ellipse.svg";
+import { useModal } from "../context/ModalContext";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { hash } = useLocation();
+  const { openModal } = useModal();
 
   // --- DRAG TO CLOSE STATE ---
   const [dragY, setDragY] = useState(0);
@@ -89,11 +92,13 @@ export default function Navbar() {
       <div className="max-w-280 2xl:max-w-300 mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="">
+          <a href="/">
           <img
             src="/assets/navbar/logo.svg"
             alt="Logo"
             className="w-10 h-10 md:w-11 md:h-11"
           />
+          </a>
         </div>
 
         {/* Desktop Links - Hidden on Mobile */}
@@ -217,7 +222,7 @@ export default function Navbar() {
               <p className="text-[#B3B3B3] font-display font-normal text-sm">X/Twiter</p>
               <p className="text-[#B3B3B3] font-display font-normal text-sm">Telegram</p>
             </div>
-            <button className="mt-4 cursor-pointer flex justify-center items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+            <button onClick={openModal} className="mt-4 cursor-pointer flex justify-center items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>
               Book a consultation
             </button>

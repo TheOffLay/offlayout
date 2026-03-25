@@ -61,9 +61,31 @@ export default function ConsultationModal() {
     <>
       <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
         {status === "success" ? (
-          <div className="mt-100 flex flex-col items-center text-center pt-8 pb-10 px-5 animate-in fade-in zoom-in duration-300 w-full max-w-138 mx-auto bg-[#171717] border border-[#1E1E1E] rounded-2xl">
-            {/* Success Icon */}
-            <div className="mb-6 relative">
+          <div className="relative overflow-hidden flex flex-col items-center text-center pt-8 pb-10 px-5 animate-in fade-in zoom-in duration-300 w-full max-w-138 mx-auto bg-[#171717] border border-[#1E1E1E] rounded-2xl">
+            {/* --- STATIC CONFETTI BACKGROUND --- */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+              {/* Left Side */}
+              <div className="absolute top-[25%] left-[10%] w-1 h-1 bg-[#525252] rounded-full opacity-60"></div>
+              <div className="absolute top-[40%] left-[12%] w-1.5 h-4 bg-[#525252] -rotate-12 rounded-[1px] opacity-80"></div>
+              <div className="absolute top-[25%] left-[22%] w-1.5 h-1.5 bg-[#525252] rotate-45 opacity-60"></div>
+              {/* Downward Triangle */}
+              <div className="absolute top-[60%] left-[18%] w-0 h-0 border-l-4 border-r-4 border-t-[6px] border-l-transparent border-r-transparent border-t-[#525252] rotate-[-20deg] opacity-70"></div>
+
+              {/* Top Middle */}
+              <div className="absolute top-[12%] left-[42%] w-1.5 h-4 bg-[#525252] rotate-15 rounded-[1px] opacity-70"></div>
+
+              {/* Right Side */}
+              <div className="absolute top-[15%] right-[28%] w-1.5 h-5 bg-[#525252] -rotate-20 rounded-[1px] opacity-90"></div>
+              <div className="absolute top-[35%] right-[18%] w-2 h-4 bg-[#525252] rotate-45 rounded-[1px] opacity-70"></div>
+              <div className="absolute top-[25%] right-[8%] w-1 h-1 bg-[#525252] rounded-full opacity-50"></div>
+              {/* Downward Triangle */}
+              <div className="absolute top-[50%] right-[25%] w-0 h-0 border-l-[3px] border-r-[3px] border-t-[5px] border-l-transparent border-r-transparent border-t-[#525252] rotate-30 opacity-80"></div>
+              <div className="absolute bottom-[25%] right-[12%] w-1.5 h-1.5 bg-[#525252] rounded-full opacity-60"></div>
+            </div>
+            {/* ---------------------------------- */}
+
+            {/* Success Icon (Added relative z-10 so it sits ABOVE the confetti) */}
+            <div className="mb-6 relative z-10">
               <img
                 src="/assets/work/mail.svg"
                 alt="Success"
@@ -71,22 +93,22 @@ export default function ConsultationModal() {
               />
             </div>
 
-            <h2 className="text-lg md:text-2xl font-display font-medium text-white mb-4">
+            <h2 className="relative z-10 text-lg md:text-2xl font-display font-medium text-white mb-4">
               Request received
             </h2>
-            <p className="text-[#B3B3B3] font-display font-normal text-xs md:text-base mb-6 md:mb-10 max-w-113 leading-relaxed">
+            <p className="relative z-10 text-[#B3B3B3] font-display font-normal text-xs md:text-base mb-6 md:mb-10 max-w-113 leading-relaxed">
               Our team will review your details and contact you using your
               preferred method to schedule a session.
             </p>
 
             <button
               onClick={closeModal}
-              className="w-full max-w-68.75 mx-auto bg-white font-display text-black font-medium text-sm md:text-base py-3.5 rounded-full cursor-pointer"
+              className="relative z-10 w-full max-w-68.75 mx-auto bg-white font-display text-black font-medium text-sm md:text-base py-3.5 rounded-full cursor-pointer hover:bg-gray-200 transition-colors"
             >
               Done
             </button>
 
-            <p className="mt-4 md:mt-6 font-display font-normal text-sm text-[#B3B3B3]">
+            <p className="relative z-10 mt-4 md:mt-6 font-display font-normal text-sm text-[#B3B3B3]">
               Need a quick reply?{" "}
               <a
                 href="https://t.me/yourtelegramhandle"
@@ -99,7 +121,7 @@ export default function ConsultationModal() {
             </p>
           </div>
         ) : (
-          <div className="relative bg-[#0A0A0A] mt-100 2xl:mt-50 w-full max-w-99 lg:max-w-150 mx-auto px-5 py-8 rounded-2xl border border-[#2A2A2A]">
+          <div className="relative bg-[#0A0A0A] mt-100 md:mt-150 2xl:mt-50 w-full max-w-99 lg:max-w-150 mx-auto px-5 py-8 rounded-2xl border border-[#2A2A2A]">
             <div className="flex items-center justify-between mb-6 lg:mb-10">
               <img
                 src="/assets/navbar/logo.svg"
@@ -266,7 +288,7 @@ export default function ConsultationModal() {
                     type="date"
                     required
                     placeholder="DD-MM-YY"
-                    className="w-full bg-[#111111] border border-[#1E1E1E] rounded-xl px-4 py-3 text-sm text-white placeholder:text-[#555555] focus:outline-none focus:border-white transition-colors scheme:dark cursor-pointer"
+                    className="w-full bg-[#111111] border border-[#1E1E1E] rounded-xl px-4 py-3 text-sm text-white placeholder:text-[#555555] focus:outline-none focus:border-white transition-colors [&::-webkit-calendar-picker-indicator]:invert cursor-pointer"
                   />
                   <div className="relative flex items-center bg-[#111111] border border-[#1E1E1E] rounded-xl px-4 focus-within:border-white transition-colors">
                     <input
@@ -274,7 +296,7 @@ export default function ConsultationModal() {
                       type="time"
                       required
                       placeholder="00:00"
-                      className="w-full bg-transparent py-3 text-sm text-white focus:outline-none scheme:dark cursor-pointer"
+                      className="w-full bg-transparent py-3 text-sm text-white focus:outline-none [&::-webkit-calendar-picker-indicator]:invert cursor-pointer"
                     />
                     <span className="text-sm text-[#555555] pointer-events-none">
                       UTC

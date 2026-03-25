@@ -19,15 +19,21 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-16 space-y-8 md:space-y-0">
             <span className="space-y-1">
               <p className="font-normal text-sm md:text-base">Menu</p>
-              <p className=" text-[#B3B3B3] font-normal text-sm md:text-base">
-                Work
-              </p>
-              <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-                Templates
-              </p>
-              <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-                About
-              </p>
+              <a href="#work">
+                <p className=" text-[#B3B3B3] font-normal text-sm md:text-base">
+                  Work
+                </p>
+              </a>
+              <a href="#templates">
+                <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
+                  Templates
+                </p>
+              </a>
+              <a href="#about">
+                <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
+                  About
+                </p>
+              </a>
             </span>
 
             <span className="space-y-1">
@@ -57,7 +63,7 @@ export default function Footer() {
             </p>
           </span>
 
-            <span>
+          <span>
             <p className="font-display font-regular text-xs md:text-base text-[#B3B3B3]">
               Created with &hearts; in Web3
             </p>
