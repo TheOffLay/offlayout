@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from "react-router";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -12,6 +13,7 @@ export default function Layout() {
       {!hideNavAndFooter && <Navbar />}
       <Outlet />
       {!hideNavAndFooter && <Footer />}
+      <Analytics />
     </div>
   );
 }
