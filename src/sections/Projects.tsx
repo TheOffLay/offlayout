@@ -118,8 +118,8 @@ export default function ProjectsGrid() {
             key={project.id}
             className="bg-[#111111] p-2 w-full max-w-164.5 h-94 md:h-120 2xl:h-176.5 rounded-2xl flex flex-col items-center justify-center"
           >
-            <div className="bg-transparent h-full w-full rounded-2xl flex flex-col items-center justify-center">
-              <div className="w-16 h-20 md:w-20 md:h-24 mb-3 flex flex-col items-center justify-between opacity-50">
+            <div className="bg-[#1E1E1E] h-full w-full rounded-2xl flex flex-col items-center justify-center">
+              <div className="w-16 h-20 md:w-20 md:h-24 2xl:w-24 2xl:h-30 mb-3 flex flex-col items-center justify-between opacity-50">
                 <div className="w-full h-[80%] border-6 md:border-8 border-[#7A7A7A] rounded-xl md:rounded-2xl 2xl:rounded-3xl flex items-end justify-center pb-1 md:pb-2 2xl:pb-3">
                   <div className="w-9 h-1.75 md:w-12 md:h-2.75">
                     <Loader />

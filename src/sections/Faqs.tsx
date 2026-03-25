@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { useModal } from "../context/ModalContext";
 
-const faqs = [
+const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
   {
     question: "Who's behind Layouts?",
-    answer:
-      "Layouts is led by Styles, a designer and builder with a passion for turning ideas into real, working products. Together with a small team of dedicated creators, Layouts  focuses on delivering thoughtful, functional, and visually clean solutions tailored to each project. Our goal is to help teams launch faster, build smarter, and make products people actually love.",
+    image: "./assets/work/styles.svg",
+    answer: (
+      <>
+      Layouts is led by <span className="underline underline-offset-2 decoration-white/60">Styles</span>, a designer and builder with a passion for turning ideas into real, working products. Together with a small team of dedicated creators, Layouts focuses on delivering thoughtful, functional, and visually clean solutions tailored to each project. Our goal is to help teams launch faster, build smarter, and make products people actually love.
+      </>
+    ),
   },
   {
     question: "What does Layouts do?",
@@ -62,7 +66,10 @@ export default function Faqs() {
           />
         </div>
 
-        <div className="pt-7 md:pt-14 pb-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto" id="faqs">
+        <div
+          className="pt-7 md:pt-14 pb-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto"
+          id="faqs"
+        >
           <h2 className="font-display font-medium text-center text-3xl md:text-5xl 2xl:text-6xl">
             Frequently Asked
             <br /> Questions
@@ -78,7 +85,7 @@ export default function Faqs() {
               const isOpen = openIndex === index;
 
               return (
-                <div key={index} className="border-b border-[#1E1E1E]">
+                <div key={index} className="relative border-b border-[#1E1E1E]">
                   {/* Question / Clickable Header */}
                   <button
                     onClick={() => toggleFAQ(index)}
@@ -116,6 +123,13 @@ export default function Faqs() {
                   >
                     <div className="overflow-hidden">
                       <p className="px-4 font-display font-normal text-[#B3B3B3] text-sm md:text-base 2xl:text-lg leading-relaxed pr-8">
+                        {faq.image && (
+                          <img
+                            src={faq.image}
+                            alt="Team"
+                            className="absolute hidden lg:block w-7 h-7 top-[17%] left-[21%] 2xl:left-[23%] -translate-x-1/2 translate-y-1/2"
+                          />
+                        )}
                         {faq.answer}
                       </p>
                     </div>
@@ -126,10 +140,13 @@ export default function Faqs() {
           </div>
 
           <div className="mt-5 md:mt-10 flex items-center justify-center">
-          <button onClick={openModal} className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
-            <span className="w-2 h-2 rounded-full animate-colorblink"></span>
-            Book a consultation
-          </button>
+            <button
+              onClick={openModal}
+              className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors"
+            >
+              <span className="w-2 h-2 rounded-full animate-colorblink"></span>
+              Book a consultation
+            </button>
           </div>
         </div>
       </section>
