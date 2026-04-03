@@ -88,7 +88,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/75">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#000000]">
       <div className="max-w-280 2xl:max-w-332 mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="">

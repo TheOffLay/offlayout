@@ -122,7 +122,7 @@ export default function Faqs() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-4 font-display font-normal text-[#B3B3B3] text-sm md:text-base 2xl:text-lg leading-relaxed pr-8">
+                      <p className="px-4 font-display font-normal text-[#B3B3B3] text-xs md:text-sm 2xl:text-base leading-relaxed pr-8">
                         {faq.image && (
                           <img
                             src={faq.image}
