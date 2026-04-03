@@ -7,7 +7,7 @@ const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
     image: "./assets/work/styles.svg",
     answer: (
       <>
-      Layouts is led by <span className="underline underline-offset-2 decoration-white/60">Styles</span>, a designer and builder with a passion for turning ideas into real, working products. Together with a small team of dedicated creators, Layouts focuses on delivering thoughtful, functional, and visually clean solutions tailored to each project. Our goal is to help teams launch faster, build smarter, and make products people actually love.
+      Layouts is led by <a href="https://x.com/oneststyles" target="_blank" rel="noreferrer" className="underline underline-offset-2 decoration-white/60">Honest</a>, a designer and builder with a passion for turning ideas into real, working products. Together with a small team of dedicated creators, Layouts focuses on delivering thoughtful, functional, and visually clean solutions tailored to each project. Our goal is to help teams launch faster, build smarter, and make products people actually love.
       </>
     ),
   },
@@ -57,8 +57,8 @@ export default function Faqs() {
   };
   return (
     <main className="px-2">
-      <section className="max-w-270 2xl:max-w-290 mx-auto px-4 pt-2 rounded-2xl bg-[#0A0A0A]">
-        <div className="flex items-center justify-center p-8 h-100 md:h-130 2xl:h-200 w-full bg-[#E2E2E2] border-2 border-white rounded-2xl">
+      <section className="max-w-270 2xl:max-w-322 mx-auto px-2 pt-2 rounded-3xl bg-[#0A0A0A]">
+        <div className="flex items-center justify-center p-8 h-100 md:h-130 2xl:h-200 w-full bg-[#E2E2E2] border-4 border-white rounded-2xl">
           <img
             src="./assets/work/Home page.svg"
             alt="Home page layout"

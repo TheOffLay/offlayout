@@ -41,10 +41,10 @@ export default function ProjectsGrid() {
   ];
 
   return (
-    <section className="max-w-280 2xl:max-w-300 mx-auto px-4 lg:px-6">
+    <section className="max-w-280 2xl:max-w-332 mx-auto px-4 lg:px-6">
       {/* Toggle tabs */}
       {/* <div className="mb-4 md:mb-8 flex justify-center gap-5 items-center w-full"> */}
-      <div className="sticky top-16 z-20 py-2 flex justify-center gap-5 items-center w-full backdrop-blur-xl bg-black/40 rounded-b-3xl md:w-fit md:mx-auto md:px-4">
+      <div className="sticky top-16 z-20 py-2 flex justify-center gap-5 items-center w-full backdrop-blur-xl bg-black/75 rounded-b-3xl md:w-fit md:mx-auto md:px-4">
         <span className="flex items-center px-3 py-2 rounded-full bg-[#2E2E2E] border border-[#1E1E1E] cursor-pointer">
           <img
             src="/assets/work/laptop-phone-sync.svg"
