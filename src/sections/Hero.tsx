@@ -32,7 +32,7 @@ export default function Hero() {
         {/* Subheading */}
         <p className="font-display font-normal text-[#a1a1a1] text-sm md:text-base 2xl:text-xl leading-relaxed md:max-w-140 mx-auto mb-10">
           Layouts is a product lab focused on execution, designing and building
-          web and Web3 products that are ready to launch.
+          Web2 and Web3 products that are ready to launch.
         </p>
 
         {/* Action Button */}
