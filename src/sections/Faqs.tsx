@@ -3,18 +3,18 @@ import { useModal } from "../context/ModalContext";
 
 const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
   {
-    question: "Who's behind Layouts?",
+    question: "Who's behind OffLayout?",
     image: "./assets/work/styles.svg",
     answer: (
       <>
-      Layouts is led by <a href="https://x.com/oneststyles" target="_blank" rel="noreferrer" className="underline underline-offset-2 decoration-white/60">Honest</a>, a designer and builder with a passion for turning ideas into real, working products. Together with a small team of dedicated creators, Layouts focuses on delivering thoughtful, functional, and visually clean solutions tailored to each project. Our goal is to help teams launch faster, build smarter, and make products people actually love.
+      OffLayout is led by <a href="https://x.com/oneststyles" target="_blank" rel="noreferrer" className="underline underline-offset-2 decoration-white/60">Honest</a>, a designer and builder with a passion for turning ideas into real, working products. Together with a small team of dedicated creators, OffLayout focuses on delivering thoughtful, functional, and visually clean solutions tailored to each project. Our goal is to help teams launch faster, build smarter, and make products people actually love.
       </>
     ),
   },
   {
-    question: "What does Layouts do?",
+    question: "What does OffLayout do?",
     answer:
-      "Layouts designs and builds digital products. We help teams turn ideas into real, working products that are ready to ship.",
+      "OffLayout designs and builds digital products. We help teams turn ideas into real, working products that are ready to ship.",
   },
   {
     question: "Do you only design, or do you also build?",

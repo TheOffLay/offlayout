@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="flex items-center justify-between mt-8 md:mt-10 pt-6 mb-6 border-t border-dashed border-[#1E1E1E]">
           <span>
             <p className="font-display font-regular text-xs md:text-base text-[#B3B3B3]">
-              &copy; {new Date().getFullYear()} Layouts
+              &copy; {new Date().getFullYear()} OffLayout
             </p>
             <p className="font-display font-regular text-xs md:text-base text-[#B3B3B3]">
               All rights reserved
