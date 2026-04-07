@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { useModal } from "../context/ModalContext";
 
-export default function HalfStudy() {
+export default function Veltrix() {
   const { openModal } = useModal();
   return (
     <>
@@ -32,18 +32,18 @@ export default function HalfStudy() {
       <section className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 mt-10 md:mt-16 2xl:mt-20">
         <div>
           <img
-            src="/assets/zernx/zernx-logo.svg"
+            src="/assets/veltrix/veltrix-logo.svg"
             alt=""
             className="w-12 h-12 md:16 md:h-16"
           />
           <h1 className="mt-6 font-display font-medium text-3xl md:text-4xl 2xl:text-5xl">
-            ZernX
+            Veltrix
           </h1>
           <p className="font-display font-medium text-[#7A7A7A] mb-4 md:mb-6 text-sm md:text-base">
-            A Decentralized Exchange Copilot
+            AI Dex for smarter trades
           </p>
-          <span className="bg-[#2A1A00] border-2 border-[#442B00] text-[#F59E0B] text-xs md:text-sm 2xl:text-base rounded-full p-2">
-            In progress
+          <span className="bg-[#00200C] border-2 border-[#003313] text-[#22C55E] text-[10px] md:text-xs 2xl:text-base rounded-full p-2">
+            Completed
           </span>
         </div>
 
@@ -55,12 +55,13 @@ export default function HalfStudy() {
                 Overview
               </h3>
               <p className="text-[#B3B3B3] font-regular text-sm md:text-base leading-relaxed">
-                ZernX is an AI-powered decentralized trading platform designed
-                to simplify how users swap and bridge tokens across multiple
-                blockchain networks. The platform introduces an intelligent
-                copilot that helps users execute transactions more efficiently
-                by optimizing gas fees, routing trades, and simplifying complex
-                Web3 interactions.
+                Decentralized trading shouldn’t rely on instinct alone. Veltrix
+                AI engine processes live on-chain data, tracking liquidity
+                movements, volatility shifts, and emerging risks across markets
+                in real time. Every swap is supported by intelligent analysis
+                designed to improve execution, reduce uncertainty, and enhance
+                decision-making. The result is a trading experience where
+                clarity replaces noise and confidence replaces guesswork.
               </p>
             </div>
 
@@ -69,14 +70,9 @@ export default function HalfStudy() {
               <h3 className="text-white font-medium text-base md:text-lg">
                 Project scope
               </h3>
-              <div className="flex flex-col gap-2">
-                <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
-                  UI/UX design
-                </p>
-                <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
-                  Brand Identity
-                </p>
-              </div>
+              <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
+                UI/UX design
+              </p>
             </div>
 
             {/* 3. Duration Section (w-auto makes it shrink to fit, pushing it to the far right edge!) */}
@@ -85,19 +81,38 @@ export default function HalfStudy() {
                 Duration
               </h3>
               <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
-                5 Days
+                3 Days
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-2 md:mt-3">
-          <img src="/assets/zernx/card 1.webp" alt="" />
-          <img src="/assets/zernx/card 2.webp" alt="" />
-          <img src="/assets/zernx/card 3.webp" alt="" />
-          <img src="/assets/zernx/card 4.webp" alt="" />
-          <img src="/assets/zernx/card 5.webp" alt="" />
-          <img src="/assets/zernx/presentation mode.webp" alt="" />
+        <div className="mt-2 md:mt-3 flex flex-col gap-1 md:gap-2">
+          <img
+            src="/assets/veltrix/card1.webp"
+            alt="snapshot of veltrix home page"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
+          />
+          <img
+            src="/assets/veltrix/card2.webp"
+            alt="snapshot of veltrix features page"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
+          />
+          <img
+            src="/assets/veltrix/card3.webp"
+            alt="snapshot of veltrix how it works page"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
+          />
+          <img
+            src="/assets/veltrix/card4.webp"
+            alt="snapshot of tokens traded on veltrix page"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
+          />
+          <img
+            src="/assets/veltrix/presentation mode.webp"
+            alt="snapshot of veltrix presentation mode"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]"
+          />
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">

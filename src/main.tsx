@@ -5,7 +5,10 @@ import "./index.css";
 import App from "./App";
 import Layout from "./layout/Layout";
 import FullStudy from "./pages/fullStudy";
-import HalfStudy from "./pages/halfStudy";
+import ZernX from "./pages/zernx";
+import Splixor from "./pages/splixor";
+import Veltrix from "./pages/veltrix";
+import Synai from "./pages/synai";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +17,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <App /> },
       { path: "/full-study", element: <FullStudy /> },
-      { path: "/half-study", element: <HalfStudy /> },
+      { path: "/zernx-case-study", element: <ZernX /> },
+      { path: "/splixor-case-study", element: <Splixor /> },
+      { path: "/veltrix-case-study", element: <Veltrix /> },
+      { path: "/synai-case-study", element: <Synai /> },
     ],
   },
 ]);

@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { useModal } from "../context/ModalContext";
 
-export default function Splixor() {
+export default function Synai() {
   const { openModal } = useModal();
   return (
     <>
@@ -32,17 +32,17 @@ export default function Splixor() {
       <section className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 mt-10 md:mt-16 2xl:mt-20">
         <div>
           <img
-            src="/assets/zernx/zernx-logo.svg"
+            src="/assets/synai/synai-logo.svg"
             alt=""
             className="w-12 h-12 md:16 md:h-16"
           />
           <h1 className="mt-6 font-display font-medium text-3xl md:text-4xl 2xl:text-5xl">
-            Splixor
+            Syn.ai
           </h1>
           <p className="font-display font-medium text-[#7A7A7A] mb-4 md:mb-6 text-sm md:text-base">
-            A Decentralized Exchange Copilot
+            Bitcoin Blockchain
           </p>
-          <span className="bg-[#2A1A00] border-2 border-[#442B00] text-[#F59E0B] text-[10px] md:text-xs 2xl:text-base rounded-full p-2">
+          <span className="bg-[#00200C] border-2 border-[#003313] text-[#22C55E] text-[10px] md:text-xs 2xl:text-base rounded-full p-2">
             Completed
           </span>
         </div>
@@ -55,12 +55,16 @@ export default function Splixor() {
                 Overview
               </h3>
               <p className="text-[#B3B3B3] font-regular text-sm md:text-base leading-relaxed">
-                ZernX is an AI-powered decentralized trading platform designed
-                to simplify how users swap and bridge tokens across multiple
-                blockchain networks. The platform introduces an intelligent
-                copilot that helps users execute transactions more efficiently
-                by optimizing gas fees, routing trades, and simplifying complex
-                Web3 interactions.
+                This project focused on designing a marketing landing page for a
+                Bitcoin alert platform that helps users discover new tokens and
+                NFTs early. The objective was to clearly communicate the
+                product’s value, build trust, and encourage sign-ups through a
+                simple, conversion-focused experience.
+              </p>
+              <p className="mt-2 text-[#B3B3B3] font-regular text-sm md:text-base leading-relaxed">
+                The page was designed to highlight real-time alerts, project
+                analysis, and user safety while simplifying complex crypto
+                concepts into clear messaging and intuitive visual hierarchy.
               </p>
             </div>
 
@@ -69,14 +73,9 @@ export default function Splixor() {
               <h3 className="text-white font-medium text-base md:text-lg">
                 Project scope
               </h3>
-              <div className="flex flex-col gap-2">
-                <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
-                  UI/UX design
-                </p>
-                <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
-                  Brand Identity
-                </p>
-              </div>
+              <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
+                UI/UX design
+              </p>
             </div>
 
             {/* 3. Duration Section (w-auto makes it shrink to fit, pushing it to the far right edge!) */}
@@ -85,19 +84,33 @@ export default function Splixor() {
                 Duration
               </h3>
               <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
-                5 Days
+                3 Days
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-2 md:mt-3 flex flex-col gap-2 md:gap-4">
-          <img src="/assets/zernx/card1.webp" alt="" className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]" />
-          <img src="/assets/zernx/card2.webp" alt="" className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]" />
-          <img src="/assets/zernx/card3.webp" alt="" className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]" />
-          <img src="/assets/zernx/card4.webp" alt="" className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]" />
-          <img src="/assets/zernx/card5.webp" alt="" className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]" />
-          <img src="/assets/zernx/presentation mode.webp" alt="" className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]" />
+        <div className="mt-2 md:mt-3 flex flex-col gap-1 md:gap-2">
+          <img
+            src="/assets/synai/card1.webp"
+            alt="snapshot of syn.ai home page"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
+          />
+          <img
+            src="/assets/synai/card2.webp"
+            alt="snapshot of syn.ai features page"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
+          />
+          <img
+            src="/assets/synai/card3.webp"
+            alt="snapshot of syn.ai how it works page"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
+          />
+          <img
+            src="/assets/synai/presentation mode.webp"
+            alt="snapshot of syn.ai presentation mode"
+            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]"
+          />
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
