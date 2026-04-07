@@ -1,5 +1,7 @@
 // import Loader from "../components/Loader";
 
+import { Link } from "react-router";
+
 export default function ProjectsGrid() {
   const projects = [
     {
@@ -7,24 +9,28 @@ export default function ProjectsGrid() {
       image: "/assets/work/zernx.webp",
       name: "ZernX",
       description: "Dex Copilot",
+      link: "/zernx-case-study",
     },
     {
       id: 2,
       image: "/assets/work/splixor.webp",
       name: "Splixor",
       description: "Subs Sharing",
+      link: "/splixor-case-study",
     },
     {
       id: 3,
       image: "/assets/work/synai.webp",
       name: "Syn.ai",
       description: "Bitcoin Blockchain",
+      link: "/synai-case-study",
     },
     {
       id: 4,
       image: "/assets/work/veltrix.webp",
       name: "Veltrix",
       description: "AI Dex",
+      link: "/veltrix-case-study",
     },
     // {
     //   id: 5,
@@ -99,10 +105,12 @@ export default function ProjectsGrid() {
                 {project.name}{" "}
                 <span className="text-[#7A7A7A]">/ {project.description}</span>
               </p>
-              <button className="flex items-center bg-transparent border border-[#2E2E2E] text-[#B3B3B3] rounded-full p-2 font-display font-medium text-xs md:text-sm 2xl:text-base">
+              <Link to={project.link}>
+              <button className="flex items-center bg-transparent border border-[#2E2E2E] text-[#B3B3B3] hover:text-white hover:border-white transition-colors cursor-pointer rounded-full p-2 font-display font-medium text-xs md:text-sm 2xl:text-base">
                 View project
                 <img src="/assets/work/arrow-white.svg" alt="" />
               </button>
+              </Link>
             </div>
           </div>
         ))}
