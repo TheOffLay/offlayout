@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { useModal } from "../context/ModalContext";
 
-export default function HalfStudy() {
+export default function Splixor() {
   const { openModal } = useModal();
   return (
     <>
@@ -32,17 +32,15 @@ export default function HalfStudy() {
       <section className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 mt-10 md:mt-16 2xl:mt-20">
         <div>
           <img
-            src="/assets/zernx/zernx-logo.svg"
+            src="/assets/full/zernx.svg"
             alt=""
             className="w-12 h-12 md:16 md:h-16"
           />
-          <h1 className="mt-6 font-display font-medium text-3xl md:text-4xl 2xl:text-5xl">
-            ZernX
+          <h1 className="mt-6 mb-4 md:mb-6 font-display font-medium text-3xl md:text-4xl 2xl:text-5xl">
+            Zernfx- <br />
+            AI Copilot for DEX System
           </h1>
-          <p className="font-display font-medium text-[#7A7A7A] mb-4 md:mb-6 text-sm md:text-base">
-            A Decentralized Exchange Copilot
-          </p>
-          <span className="bg-[#2A1A00] border-2 border-[#442B00] text-[#F59E0B] text-xs md:text-sm 2xl:text-base rounded-full p-2">
+          <span className="bg-[#00200C] border-2 border-[#003313] text-[#22C55E] text-xs md:text-sm 2xl:text-base rounded-full p-2">
             In progress
           </span>
         </div>
@@ -54,14 +52,20 @@ export default function HalfStudy() {
               <h3 className="text-white font-medium text-base md:text-lg">
                 Overview
               </h3>
-              <p className="text-[#B3B3B3] font-regular text-sm md:text-base leading-relaxed">
-                ZernX is an AI-powered decentralized trading platform designed
-                to simplify how users swap and bridge tokens across multiple
-                blockchain networks. The platform introduces an intelligent
-                copilot that helps users execute transactions more efficiently
-                by optimizing gas fees, routing trades, and simplifying complex
-                Web3 interactions.
-              </p>
+              <div className="flex flex-col gap-4">
+                <p className="text-[#B3B3B3] font-regular text-sm md:text-base leading-relaxed">
+                  Layouts is a design partner that works with founders and
+                  product teams to design and build clear, scalable digital
+                  products. We focus on thoughtful UI/UX, strong visual systems,
+                  and practical execution that helps products ship and grow.
+                </p>
+                <p className="text-[#B3B3B3] font-regular text-sm md:text-base leading-relaxed">
+                  Layouts is a design partner that works with founders and
+                  product teams to design and build clear, scalable digital
+                  products. We focus on thoughtful UI/UX, strong visual systems,
+                  and practical execution that helps products ship and grow.
+                </p>
+              </div>
             </div>
 
             {/* 2. Project Scope Section */}
@@ -85,30 +89,21 @@ export default function HalfStudy() {
                 Duration
               </h3>
               <p className="text-[#B3B3B3] font-regular text-sm md:text-base">
-                5 Days
+                4 Weeks
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-2 md:mt-3">
-          <img src="/assets/zernx/card 1.webp" alt="" />
-          <img src="/assets/zernx/card 2.webp" alt="" />
-          <img src="/assets/zernx/card 3.webp" alt="" />
-          <img src="/assets/zernx/card 4.webp" alt="" />
-          <img src="/assets/zernx/card 5.webp" alt="" />
-          <img src="/assets/zernx/presentation mode.webp" alt="" />
-        </div>
+        <div className="mt-6 md:mt-12 2xl:mt-20 bg-[#1E1E1E] rounded-2xl w-full h-300 md:h-600 2xl:h-685"></div>
+        <div className="mt-2 md:mt-3 bg-[#1E1E1E] rounded-2xl w-full h-100 md:h-150 2xl:h-200"></div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
           <h2 className="font-display font-medium text-3xl md:text-6xl text-center">
             Build with us
           </h2>
           <div className="flex items-center justify-center mt-4 md:mt-8">
-            <button
-              onClick={openModal}
-              className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors"
-            >
+            <button onClick={openModal} className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>
               Book a consultation
             </button>
