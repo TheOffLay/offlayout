@@ -7,7 +7,20 @@ const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
     image: "./assets/work/styles.svg",
     answer: (
       <>
-      OffLayout is led by <a href="https://x.com/oneststyles" target="_blank" rel="noreferrer" className="underline underline-offset-2 decoration-white/60">Honest</a>, a designer and builder with a passion for turning ideas into real, working products. Together with a small team of dedicated creators, OffLayout focuses on delivering thoughtful, functional, and visually clean solutions tailored to each project. Our goal is to help teams launch faster, build smarter, and make products people actually love.
+        OffLayout is led by{" "}
+        <a
+          href="https://x.com/oneststyles"
+          target="_blank"
+          rel="noreferrer"
+          className="underline underline-offset-2 decoration-white/60"
+        >
+          Honest
+        </a>
+        , a designer and builder with a passion for turning ideas into real,
+        working products. Together with a small team of dedicated creators,
+        OffLayout focuses on delivering thoughtful, functional, and visually
+        clean solutions tailored to each project. Our goal is to help teams
+        launch faster, build smarter, and make products people actually love.
       </>
     ),
   },
@@ -58,11 +71,15 @@ export default function Faqs() {
   return (
     <main className="px-2">
       <section className="max-w-270 2xl:max-w-322 mx-auto px-2 pt-2 rounded-3xl bg-[#0A0A0A]">
-        <div className="flex items-center justify-center p-8 h-100 md:h-130 2xl:h-200 w-full bg-[#E2E2E2] border-4 border-white rounded-2xl">
-          <img
-            src="./assets/work/Home page.svg"
-            alt="Home page layout"
-            className="max-w-full max-h-full object-contain"
+        {/* <div className="flex items-center justify-center p-8 h-100 md:h-130 2xl:h-200 w-full bg-[#E2E2E2] border-4 border-white rounded-2xl"> */}
+        <div>
+          <video
+            src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775546920/offlayout_np8j5y.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="max-w-full max-h-full object-contain rounded-2xl"
           />
         </div>
 

@@ -70,7 +70,7 @@ export default function Templates() {
               <span className="flex items-center gap-2 mt-2">
                 {/* Dynamically mapping over the specific icons for this card */}
                 {card.icons.map((icon, index) => (
-                  <img key={index} src={icon} alt="" />
+                  <img key={index} src={icon} alt="" className="w-5 h-5 md:w-6 md:h-6" />
                 ))}
                 <p className="font-display font-normal text-xs md:text-base 2xl:text-lg text-[#B3B3B3]">
                   {card.title}

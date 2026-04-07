@@ -4,25 +4,25 @@ export default function ProjectsGrid() {
   const projects = [
     {
       id: 1,
-      image: "/assets/work/zernx.svg",
+      image: "/assets/work/zernx.webp",
       name: "ZernX",
       description: "Dex Copilot",
     },
     {
       id: 2,
-      image: "/assets/work/splixor.svg",
+      image: "/assets/work/splixor.webp",
       name: "Splixor",
       description: "Subs Sharing",
     },
     {
       id: 3,
-      image: "/assets/work/synai.svg",
+      image: "/assets/work/synai.webp",
       name: "Syn.ai",
       description: "Bitcoin Blockchain",
     },
     {
       id: 4,
-      image: "/assets/work/veltrix.svg",
+      image: "/assets/work/veltrix.webp",
       name: "Veltrix",
       description: "AI Dex",
     },
