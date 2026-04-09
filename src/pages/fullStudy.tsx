@@ -213,7 +213,7 @@ export default function FullStudy() {
             />
           </div>
 
-          <div className="relative w-full aspect-video bg-[#4F46E5] border border-[#C8D1E0] overflow-hidden rounded-2xl mt-5">
+          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
             {/* 1. The Wide, Diffused Outer Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
 
@@ -221,12 +221,78 @@ export default function FullStudy() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] md:w-[25%] aspect-square bg-[#FF3C88] rounded-full blur-[20px] md:blur-[60px] pointer-events-none"></div>
             <div className="relative z-10 w-full h-full p-4 md:p-12 flex items-center justify-center">
               <video
-              src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775714799/splixor-vid1_t17xzb.mov"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="max-w-full h-full object-contain rounded-2xl"
+                src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775714799/splixor-vid1_t17xzb.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="max-w-full h-full object-contain rounded-2xl"
+              />
+            </div>
+          </div>
+          <div className="w-full max-w-232 mx-auto mt-10 md:mt-25">
+            <div className="flex flex-col md:flex-row md:gap-24">
+              <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl mb-2 md:mb-0 w-full md:max-w-30 mx-auto">
+                The solution
+              </p>
+
+              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
+                The MVP introduced a lightweight interface where users could
+                view available subscription pools and join them through a clear
+                contribution flow. Each subscription displayed only necessary
+                information such as cost breakdown and remaining slots. The
+                solution focused on proving usability and desirability rather
+                than building advanced automation at an early stage.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+            {/* 1. The Wide, Diffused Outer Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
+
+            {/* 2. The Thicker, Intense Inner Core (The Circle) */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] md:w-[25%] aspect-square bg-[#FF3C88] rounded-full blur-[20px] md:blur-[60px] pointer-events-none"></div>
+            <div className="relative z-10 w-full h-full p-4 md:p-12 flex items-center justify-center">
+              <video
+                src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775714788/splixor-vid2_lm4o0w.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="max-w-full h-full object-contain rounded-2xl"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
+            <img
+              src="/assets/splixor/card5.webp"
+              alt="snapshot of splixor card"
+              className="rounded-2xl w-full"
+            />
+            <img
+              src="/assets/splixor/card6.webp"
+              alt="snapshot of splixor card"
+              className="rounded-2xl w-full"
+            />
+          </div>
+
+          {/* fifth video  */}
+                    <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+            {/* 1. The Wide, Diffused Outer Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
+
+            {/* 2. The Thicker, Intense Inner Core (The Circle) */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] md:w-[25%] aspect-square bg-[#FF3C88] rounded-full blur-[20px] md:blur-[60px] pointer-events-none"></div>
+            <div className="relative z-10 w-full h-full p-4 md:p-12 flex items-center justify-center">
+              <video
+                src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775714792/splixor-vid3_rkrvui.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="max-w-full h-full object-contain rounded-2xl"
               />
             </div>
           </div>
@@ -265,16 +331,8 @@ export default function FullStudy() {
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
-            {/* Box 1 (Top Left) */}
-            <div className="bg-[#1E1E1E] rounded-2xl h-56.5 md:h-100 2xl:h-160 w-full"></div>
-
-            {/* Box 2 (Top Right) */}
-            <div className="bg-[#1E1E1E] rounded-2xl h-56.5 md:h-100 2xl:h-160 w-full"></div>
-
             {/* Box 3 (The Wide Middle Box) */}
             <div className="bg-[#1E1E1E] rounded-2xl h-100 md:h-120 2xl:h-160 w-full md:col-span-2"></div>
-          </div>
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
