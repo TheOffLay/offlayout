@@ -47,7 +47,7 @@ export default function ProjectsGrid() {
   ];
 
   return (
-    <section className="max-w-280 2xl:max-w-332 mx-auto px-4 lg:px-6">
+    <section className="max-w-280 2xl:max-w-325 mx-auto px-4 lg:px-6">
       {/* Toggle tabs */}
       {/* <div className="mb-4 md:mb-8 flex justify-center gap-5 items-center w-full"> */}
       <div className="sticky top-16 z-20 py-2 flex justify-center gap-5 items-center w-full backdrop-blur-xl bg-black/75 rounded-b-3xl md:w-fit md:mx-auto md:px-4">
@@ -106,10 +106,10 @@ export default function ProjectsGrid() {
                 <span className="text-[#7A7A7A]">/ {project.description}</span>
               </p>
               <Link to={project.link}>
-              <button className="flex items-center bg-transparent border border-[#2E2E2E] text-[#B3B3B3] hover:text-white hover:border-white transition-colors cursor-pointer rounded-full p-2 font-display font-medium text-xs md:text-sm 2xl:text-base">
-                View project
-                <img src="/assets/work/arrow-white.svg" alt="" />
-              </button>
+                <button className="flex items-center bg-transparent border border-[#2E2E2E] text-[#B3B3B3] hover:text-white hover:border-white transition-colors cursor-pointer rounded-full p-2 font-display font-medium text-xs md:text-sm 2xl:text-base">
+                  View project
+                  <img src="/assets/work/arrow-white.svg" alt="" />
+                </button>
               </Link>
             </div>
           </div>

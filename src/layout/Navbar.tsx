@@ -5,7 +5,6 @@ import Cancel from "/assets/navbar/cancel.svg";
 import Ellipse from "/assets/navbar/ellipse.svg";
 import { useModal } from "../context/ModalContext";
 
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { hash } = useLocation();
@@ -89,7 +88,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#000000]">
-      <div className="max-w-280 2xl:max-w-332 mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-280 2xl:max-w-325 mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="">
           <a href="/">

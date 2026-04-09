@@ -5,7 +5,7 @@ export default function Splixor() {
   const { openModal } = useModal();
   return (
     <>
-      <header className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
+      <header className="max-w-280 2xl:max-w-325 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
         <Link to="/">
           <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] border-2 border-[#2E2E2E] rounded-full cursor-pointer">
             <img
@@ -30,7 +30,7 @@ export default function Splixor() {
       </header>
 
       <section className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 mt-10 md:mt-16 2xl:mt-20">
-        <div>
+        <div className="flex flex-col justify-center items-center">
           <img
             src="/assets/zernx/zernx-logo.svg"
             alt=""

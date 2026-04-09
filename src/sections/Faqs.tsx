@@ -12,9 +12,9 @@ const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
           href="https://x.com/oneststyles"
           target="_blank"
           rel="noreferrer"
-          className="underline underline-offset-2 decoration-white/60"
+          className="underline underline-offset-2 decoration-white"
         >
-          Honest
+          Styles
         </a>
         , a designer and builder with a passion for turning ideas into real,
         working products. Together with a small team of dedicated creators,
@@ -70,8 +70,8 @@ export default function Faqs() {
   };
   return (
     <main className="px-2">
-      <section className="max-w-270 2xl:max-w-322 mx-auto px-2 pt-2 rounded-3xl bg-[#0A0A0A]">
-        {/* <div className="flex items-center justify-center p-8 h-100 md:h-130 2xl:h-200 w-full bg-[#E2E2E2] border-4 border-white rounded-2xl"> */}
+      <section className="max-w-267 2xl:max-w-312 mx-auto px-2 pt-2 rounded-3xl bg-[#0A0A0A]">
+        {/* <div className="flex items-center justify-center h-full md:h-130 2xl:h-full"> */}
         <div>
           <video
             src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775546920/offlayout_np8j5y.mp4"
@@ -79,7 +79,7 @@ export default function Faqs() {
             loop
             muted
             playsInline
-            className="max-w-full max-h-full object-contain rounded-2xl"
+            className="max-w-full h-full object-contain rounded-2xl"
           />
         </div>
 
@@ -144,7 +144,7 @@ export default function Faqs() {
                           <img
                             src={faq.image}
                             alt="Team"
-                            className="absolute hidden lg:block w-7 h-7 top-[17%] left-[21%] 2xl:left-[23%] -translate-x-1/2 translate-y-1/2"
+                            className="absolute hidden lg:block w-8 h-8 2xl:w-9 2xl:h-9 top-[17%] left-[21%] 2xl:left-[23%] -translate-x-1/2 translate-y-1/2"
                           />
                         )}
                         {faq.answer}

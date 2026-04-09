@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { ModalProvider } from "../context/ModalContext";
+import ScrollToTop from "../helpers/ScrollToTop";
 
 export default function Layout() {
   const location = useLocation();
@@ -13,6 +14,7 @@ export default function Layout() {
     <ModalProvider>
       <div className="bg-[#000000] min-h-screen text-white">
         {!hideNavAndFooter && <Navbar />}
+        <ScrollToTop />
         <Outlet />
         {!hideNavAndFooter && <Footer />}
         <Analytics />

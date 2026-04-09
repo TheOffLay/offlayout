@@ -1,7 +1,7 @@
 export default function Idea() {
   return (
     <main id="about">
-      <section className="max-w-332 mx-auto px-4 md:px-6 mt-16 md:mt-24 2xl:mt-32">
+      <section className="max-w-325 mx-auto px-4 md:px-6 mt-16 md:mt-24 2xl:mt-32">
         <h2 className="font-display font-medium text-center text-3xl md:text-5xl 2xl:text-6xl">
           From idea to
           <br /> product

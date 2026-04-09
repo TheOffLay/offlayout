@@ -5,7 +5,7 @@ export default function ZernX() {
   const { openModal } = useModal();
   return (
     <>
-      <header className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
+      <header className="max-w-280 2xl:max-w-325 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
         <Link to="/">
           <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] hover:from-[#E5E5E5] hover:to-[#C4C4C4] border-2 border-[#2E2E2E] rounded-full cursor-pointer transition-all duration-300 ease-in-out">
             <img
@@ -117,10 +117,13 @@ export default function ZernX() {
             alt="snapshot of zernx cta page"
             className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
           />
-          <img
-            src="/assets/zernx/presentation mode.webp"
-            alt="snapshot of zernx presentation mode"
-            className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E]"
+          <video
+            src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775674830/zernx-presentation_fgrroy.mov"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="max-w-full h-full object-contain rounded-2xl"
           />
         </div>
 
