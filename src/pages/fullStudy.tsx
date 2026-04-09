@@ -279,7 +279,7 @@ export default function FullStudy() {
           </div>
 
           {/* fifth video  */}
-                    <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+            <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
             {/* 1. The Wide, Diffused Outer Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
 
@@ -331,8 +331,23 @@ export default function FullStudy() {
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
-            {/* Box 3 (The Wide Middle Box) */}
-            <div className="bg-[#1E1E1E] rounded-2xl h-100 md:h-120 2xl:h-160 w-full md:col-span-2"></div>
+            <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+            {/* 1. The Wide, Diffused Outer Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
+
+            {/* 2. The Thicker, Intense Inner Core (The Circle) */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] md:w-[25%] aspect-square bg-[#FF3C88] rounded-full blur-[20px] md:blur-[60px] pointer-events-none"></div>
+            <div className="relative z-10 w-full h-full p-4 md:p-12 flex items-center justify-center">
+              <video
+                src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775719920/splixor-vid4_zbomse.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="max-w-full h-full object-contain rounded-2xl"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
