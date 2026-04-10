@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 import App from "./App";
 import Layout from "./layout/Layout";
-import FullStudy from "./pages/fullStudy";
 import ZernX from "./pages/zernx";
 import Splixor from "./pages/splixor";
 import Veltrix from "./pages/veltrix";
@@ -16,7 +15,6 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <App /> },
-      { path: "/full-study", element: <FullStudy /> },
       { path: "/zernx-case-study", element: <ZernX /> },
       { path: "/splixor-case-study", element: <Splixor /> },
       { path: "/veltrix-case-study", element: <Veltrix /> },

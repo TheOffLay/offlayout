@@ -7,7 +7,7 @@ import ScrollToTop from "../helpers/ScrollToTop";
 
 export default function Layout() {
   const location = useLocation();
-  const hiddenRoutes = ["/full-study", "/zernx-case-study", "/splixor-case-study", "/veltrix-case-study", "/synai-case-study"];
+  const hiddenRoutes = ["/zernx-case-study", "/splixor-case-study", "/veltrix-case-study", "/synai-case-study"];
   const hideNavAndFooter = hiddenRoutes.includes(location.pathname);
 
   return (
