@@ -6,13 +6,13 @@ export default function Footer() {
           <span className="space-y-1">
             <p className="font-normal text-sm md:text-base">Clients</p>
             <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
+             ZernX
+            </p>
+            <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
               Splixor
             </p>
             <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-              Zenee
-            </p>
-            <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-              Ceepherlabs
+              Syn.ai
             </p>
           </span>
 

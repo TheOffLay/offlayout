@@ -87,84 +87,95 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#000000]">
-      <div className="max-w-280 2xl:max-w-325 mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <div className="">
-          <a href="/">
-          <img
-            src="/assets/navbar/logo.svg"
-            alt="Logo"
-            className="w-10 h-10 md:w-11 md:h-11"
-          />
-          </a>
+    <>
+      {/* Navbar with blur */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/75 backdrop-blur-xl">
+        <div className="max-w-280 2xl:max-w-318 mx-auto px-6 h-16 flex items-center justify-between">
+          {/* Logo */}
+          <div className="min-w-25 md:min-w-30 flex justify-start py-2 pr-2 md:pr-3">
+            <a href="/">
+              <img
+                src="/assets/navbar/logo.svg"
+                alt="Logo"
+                className="w-10 h-10 md:w-11 md:h-11"
+              />
+            </a>
+          </div>
+
+          {/* Desktop Links - Hidden on Mobile */}
+          <div className="hidden md:flex items-center gap-8 text-[16px]">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.path;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={(e) => handleScroll(e, link.path)}
+                  className={`relative text-sm 2xl:text-base font-display flex flex-col items-center transition-opacity hover:opacity-100 cursor-pointer ${
+                    isActive
+                      ? "opacity-100 font-medium"
+                      : "opacity-60 font-normal"
+                  }`}
+                >
+                  {link.name}
+                  {isActive && (
+                    <img
+                      src={Ellipse}
+                      alt=""
+                      className="w-2 h-2 absolute -bottom-3"
+                    />
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Action Button & Mobile Toggle */}
+          <div className="flex items-center gap-4">
+            {/* <button className="flex justify-center items-center gap-1 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black py-2 px-2 md:px-3 rounded-full text-xs md:text-sm 2xl:text-base font-display font-medium cursor-pointer">
+              Get in touch
+              <img
+                src="./assets/navbar/arrow-black.svg"
+                alt="Arrow Right"
+                className="w-4 h-4 md:w-6 md:h-6"
+              />
+            </button> */}
+            <button className="whitespace-nowrap min-w-25 md:min-w-30 flex justify-center items-center gap-1 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black py-2 px-2 md:px-3 rounded-full text-xs md:text-sm 2xl:text-base font-display font-medium cursor-pointer">
+              Get in touch
+              <img
+                src="./assets/navbar/arrow-black.svg"
+                alt="Arrow Right"
+                className="w-4 h-4 md:w-6 md:h-6"
+              />
+            </button>
+
+            <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+              {isOpen ? (
+                <img src={Cancel} alt="cancel-btn" className="w-6 h-6" />
+              ) : (
+                <img src={Menu} alt="menu-btn" className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
+      </nav>
 
-        {/* Desktop Links - Hidden on Mobile */}
-        <div className="hidden md:flex items-center gap-8 text-[16px]">
-          {navLinks.map((link) => {
-            const isActive = activeSection === link.path;
-            return (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={(e) => handleScroll(e, link.path)}
-                className={`relative text-sm 2xl:text-base font-display flex flex-col items-center transition-opacity hover:opacity-100 cursor-pointer ${
-                  isActive
-                    ? "opacity-100 font-medium"
-                    : "opacity-60 font-normal"
-                }`}
-              >
-                {link.name}
-                {isActive && (
-                  <img
-                    src={Ellipse}
-                    alt=""
-                    className="w-2 h-2 absolute -bottom-3"
-                  />
-                )}
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* Action Button & Mobile Toggle */}
-        <div className="flex items-center gap-4">
-          <button className="flex items-center gap-1 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black px-2 md:px-5 py-2 rounded-full text-xs md:text-sm 2xl:text-base font-display font-medium cursor-pointer">
-            Get in touch
-            <img
-              src="./assets/navbar/arrow-black.svg"
-              alt="Arrow Right"
-              className="w-4 h-4 md:w-6 md:h-6"
-            />
-          </button>
-
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
-            {isOpen ? (
-              <img src={Cancel} alt="cancel-btn" className="w-6 h-6" />
-            ) : (
-              <img src={Menu} alt="menu-btn" className="w-6 h-6" />
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu - Slides up from bottom */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black/60 transition-opacity duration-300 md:hidden ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 bg-black/60 transition-opacity duration-300 md:hidden z-50 ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
         onClick={() => setIsOpen(false)}
       >
         <div
-        // Removed Tailwind's translate/transition classes here, we handle it completely in the style prop now
           className="absolute bottom-0 left-0 w-full bg-[#0A0A0A] rounded-t-2xl p-4"
           style={{
             transform: isOpen ? `translateY(${dragY}px)` : "translateY(100%)",
-            // If dragging, remove transition so it sticks to finger. If released, snap it nicely.
-            transition: isDragging ? "none" : "transform 0.4s cubic-bezier(0.32, 0.72, 0, 1)",
+            transition: isDragging
+              ? "none"
+              : "transform 0.4s cubic-bezier(0.32, 0.72, 0, 1)",
           }}
           onClick={(e) => e.stopPropagation()}
-          
-          // --- FLUID SWIPE LOGIC ---
           onTouchStart={(e) => {
             touchStartY.current = e.touches[0].clientY;
             setIsDragging(true);
@@ -172,7 +183,6 @@ export default function Navbar() {
           onTouchMove={(e) => {
             const currentY = e.touches[0].clientY;
             const diff = currentY - touchStartY.current;
-            // Only allow dragging downwards
             if (diff > 0) {
               setDragY(diff);
             } else {
@@ -181,11 +191,9 @@ export default function Navbar() {
           }}
           onTouchEnd={() => {
             setIsDragging(false);
-            // If they dragged down more than 100 pixels, consider it a close action
             if (dragY > 100) {
               setIsOpen(false);
             }
-            // Always reset drag pixel count on release so it snaps back to 0
             setDragY(0);
           }}
         >
@@ -202,26 +210,39 @@ export default function Navbar() {
                     setIsOpen(false);
                     handleScroll(e, link.path);
                   }}
-                  className={`text-xl font-medium font-display ${isActive ? "opacity-100 font-medium" : "opacity-60 font-normal"}`}
+                  className={`text-xl font-medium font-display ${
+                    isActive
+                      ? "opacity-100 font-medium"
+                      : "opacity-60 font-normal"
+                  }`}
                 >
                   {link.name}
                   {isActive && (
-                  <img
-                    src={Ellipse}
-                    alt=""
-                    className="w-2 h-2 absolute -bottom-3"
-                  />
-                )}
+                    <img
+                      src={Ellipse}
+                      alt=""
+                      className="w-2 h-2 absolute -bottom-3"
+                    />
+                  )}
                 </Link>
               );
             })}
             <div className="mt-4 space-y-1">
               <p className="font-display font-normal text-sm">Connect</p>
-              <p className="text-[#B3B3B3] font-display font-normal text-sm">Email</p>
-              <p className="text-[#B3B3B3] font-display font-normal text-sm">X/Twiter</p>
-              <p className="text-[#B3B3B3] font-display font-normal text-sm">Telegram</p>
+              <p className="text-[#B3B3B3] font-display font-normal text-sm">
+                Email
+              </p>
+              <p className="text-[#B3B3B3] font-display font-normal text-sm">
+                X/Twiter
+              </p>
+              <p className="text-[#B3B3B3] font-display font-normal text-sm">
+                Telegram
+              </p>
             </div>
-            <button onClick={openModal} className="mt-4 cursor-pointer flex justify-center items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+            <button
+              onClick={openModal}
+              className="mt-4 cursor-pointer flex justify-center items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors"
+            >
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>
               Book a consultation
             </button>
@@ -248,6 +269,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </nav>
+    </>
   );
 }

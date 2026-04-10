@@ -1,5 +1,3 @@
-// import Loader from "../components/Loader";
-
 import { Link } from "react-router";
 
 export default function ProjectsGrid() {
@@ -50,7 +48,7 @@ export default function ProjectsGrid() {
     <section className="max-w-280 2xl:max-w-325 mx-auto px-4 lg:px-6">
       {/* Toggle tabs */}
       {/* <div className="mb-4 md:mb-8 flex justify-center gap-5 items-center w-full"> */}
-      <div className="sticky top-16 z-20 py-2 flex justify-center gap-5 items-center w-full backdrop-blur-xl bg-black/75 rounded-b-3xl md:w-fit md:mx-auto md:px-4">
+      <div className="sticky top-16 z-20 py-2 flex justify-center gap-5 items-center backdrop-blur-xl bg-black/75 rounded-b-3xl w-fit mx-auto px-4">
         <span className="flex items-center px-3 py-2 rounded-full bg-[#2E2E2E] border border-[#1E1E1E] cursor-pointer">
           <img
             src="/assets/work/laptop-phone-sync.svg"
@@ -84,7 +82,7 @@ export default function ProjectsGrid() {
       </div>
 
       {/* Cards md:max-w-15         max-w-164.5 h-94 md:h-120 2xl:h-176.5 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
         {projects.map((project) => (
           <div
             key={project.id}

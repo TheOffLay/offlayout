@@ -84,7 +84,7 @@ export default function Faqs() {
         </div>
 
         <div
-          className="pt-7 md:pt-14 pb-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto"
+          className="pt-10 md:pt-20 pb-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto"
           id="faqs"
         >
           <h2 className="font-display font-medium text-center text-3xl md:text-5xl 2xl:text-6xl">
@@ -141,11 +141,13 @@ export default function Faqs() {
                     <div className="overflow-hidden">
                       <p className="px-4 font-display font-normal text-[#B3B3B3] text-xs md:text-sm 2xl:text-base leading-relaxed pr-8">
                         {faq.image && (
-                          <img
-                            src={faq.image}
-                            alt="Team"
-                            className="absolute hidden lg:block w-8 h-8 2xl:w-9 2xl:h-9 top-[17%] left-[21%] 2xl:left-[23%] -translate-x-1/2 translate-y-1/2"
-                          />
+                          <div className="absolute hidden lg:block top-[17%] left-[21%] 2xl:left-[23%] -translate-x-1/2 translate-y-1/2">
+                            <img
+                              src={faq.image}
+                              alt="Team"
+                              className="w-8 h-8 2xl:w-9 2xl:h-9 animate-bounce [animation-duration:3s]"
+                            />
+                          </div>
                         )}
                         {faq.answer}
                       </p>
