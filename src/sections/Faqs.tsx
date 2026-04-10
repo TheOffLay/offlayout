@@ -87,7 +87,7 @@ export default function Faqs() {
           className="pt-10 md:pt-20 pb-14 border-x border-dashed border-[#1E1E1E] w-full max-w-183.5 mx-auto"
           id="faqs"
         >
-          <h2 className="font-display font-medium text-center text-3xl md:text-5xl 2xl:text-6xl">
+          <h2 className="mt-8 md:mt-16 font-display font-medium text-center text-3xl md:text-5xl 2xl:text-6xl">
             Frequently Asked
             <br /> Questions
           </h2>
@@ -145,7 +145,7 @@ export default function Faqs() {
                             <img
                               src={faq.image}
                               alt="Team"
-                              className="w-8 h-8 2xl:w-9 2xl:h-9 animate-bounce [animation-duration:3s]"
+                              className="w-8 h-8 2xl:w-9 2xl:h-9 animate-bounce [animation-duration:1.5s]"
                             />
                           </div>
                         )}
