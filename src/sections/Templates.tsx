@@ -20,7 +20,7 @@ export default function Templates() {
   return (
     <>
       <section
-        className="max-w-280 2xl:max-w-325 mx-auto px-4 lg:px-6 mt-32 md:mt-40 2xl:mt-48"
+        className="max-w-280 2xl:max-w-318 mx-auto px-4 lg:px-6 mt-32 md:mt-40 2xl:mt-48"
         id="templates"
       >
         <h2 className="font-display font-medium text-3xl md:text-4xl 2xl:text-5xl">

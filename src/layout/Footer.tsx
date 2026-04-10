@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Footer() {
   return (
     <>
@@ -5,32 +7,38 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-8 md:space-y-0">
           <span className="space-y-1">
             <p className="font-normal text-sm md:text-base">Clients</p>
-            <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-             ZernX
-            </p>
-            <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-              Splixor
-            </p>
-            <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-              Syn.ai
-            </p>
+            <Link to="/zernx-case-study">
+              <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+                ZernX
+              </p>
+            </Link>
+            <Link to="/splixor-case-study">
+              <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+                Splixor
+              </p>
+            </Link>
+            <Link to="/syn-ai-case-study">
+              <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+                Syn.ai
+              </p>
+            </Link>
           </span>
 
           <div className="flex flex-col md:flex-row md:items-center md:gap-16 space-y-8 md:space-y-0">
             <span className="space-y-1">
               <p className="font-normal text-sm md:text-base">Menu</p>
               <a href="#work">
-                <p className=" text-[#B3B3B3] font-normal text-sm md:text-base">
+                <p className=" text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
                   Work
                 </p>
               </a>
               <a href="#templates">
-                <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
                   Templates
                 </p>
               </a>
               <a href="#about">
-                <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
                   About
                 </p>
               </a>
@@ -38,15 +46,21 @@ export default function Footer() {
 
             <span className="space-y-1">
               <p className="font-normal text-sm md:text-base">Connect</p>
-              <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-                Email
-              </p>
-              <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-                X/Twiter
-              </p>
-              <p className="text-[#B3B3B3] font-normal text-sm md:text-base">
-                Telegram
-              </p>
+              <Link to="mailto:offlayout@gmail.com">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+                  Email
+                </p>
+              </Link>
+              <Link to="https://x.com/offlayout">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+                  X/Twitter
+                </p>
+              </Link>
+              <Link to="https://t.me/offlayout">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+                  Telegram
+                </p>
+              </Link>
             </span>
           </div>
         </div>
