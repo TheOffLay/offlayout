@@ -98,7 +98,7 @@ export default function Idea() {
 
           <CursorBadge
             src="/assets/idea/designer.svg"
-            alt="Barry badge"
+            alt="Tim badge"
             range={60}
             speed={0.05}
             className="absolute z-20 top-1/2 left-1/2 

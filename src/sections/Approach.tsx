@@ -10,9 +10,9 @@ export default function Approach() {
         </p>
 
         {/* cards */}
-        <div className="mt-5 md:mt-10 px-4 md:px-0 flex flex-col items-center justify-center gap-4 md:flex-row">
+        <div className="mt-5 md:mt-10 px-6 md:px-0 flex flex-col items-center justify-center gap-4 md:flex-row">
           <div className="bg-[#111111] w-full md:max-w-[318.67px] rounded-2xl p-2">
-            <img src="/assets/work/approach-1.svg" alt="" className="w-full h-full" />
+            <img src="/assets/work/approach-1.svg" alt="" className="w-full h-full rounded-xl" />
             <span className="flex flex-col items-start pt-4 pb-6 px-2">
               <h3 className="font-display font-medium text-xl">Book a call</h3>
               <p className="text-[#B3B3B3] font-display font-normal text-xs md:text-sm 2xl:text-base">
@@ -22,7 +22,7 @@ export default function Approach() {
           </div>
 
           <div className="bg-[#111111] w-full md:max-w-[318.67px] rounded-2xl p-2">
-            <img src="/assets/work/approach-2.svg" alt="" className="w-full h-full" />
+            <img src="/assets/work/approach-2.svg" alt="" className="w-full h-full rounded-xl" />
             <span className="flex flex-col items-start pt-4 pb-6 px-2">
               <h3 className="font-display font-medium text-xl">Design & build</h3>
               <p className="text-[#B3B3B3] font-display font-normal text-xs md:text-sm 2xl:text-base">
@@ -32,7 +32,7 @@ export default function Approach() {
           </div>
 
           <div className="bg-[#111111] w-full md:max-w-[318.67px] rounded-2xl p-2">
-            <img src="/assets/work/approach-3.svg" alt="" className="w-full h-full"  />
+            <img src="/assets/work/approach-3.svg" alt="" className="w-full h-full rounded-xl"  />
             <span className="flex flex-col items-start pt-4 pb-6 px-2">
               <h3 className="font-display font-medium text-xl">Launch</h3>
               <p className="text-[#B3B3B3] font-display font-normal text-xs md:text-sm 2xl:text-base">
