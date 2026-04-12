@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+// import { Link } from "react-router";
 
 export default function Footer() {
   return (
@@ -7,21 +7,31 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-8 md:space-y-0">
           <span className="space-y-1">
             <p className="font-normal text-sm md:text-base">Clients</p>
-            <Link to="/zernx-case-study">
+            <a
+              href="https://zernx.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
                 ZernX
               </p>
-            </Link>
-            <Link to="/splixor-case-study">
+            </a>
+            <div className="flex items-center gap-2">
               <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
                 Splixor
               </p>
-            </Link>
-            <Link to="/syn-ai-case-study">
+              <p className="font-display font-normal text-[10px] text-xs rounded-full p-1 text-[#7A7A7A] border border-[#1E1E1E]">
+                Coming soon
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
               <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
                 Syn.ai
               </p>
-            </Link>
+                <p className="font-display font-normal text-[10px] text-xs rounded-full p-1 text-[#7A7A7A] border border-[#1E1E1E]">
+                Coming soon
+              </p>
+            </div>
           </span>
 
           <div className="flex flex-col md:flex-row md:items-center md:gap-16 space-y-8 md:space-y-0">
@@ -46,21 +56,31 @@ export default function Footer() {
 
             <span className="space-y-1">
               <p className="font-normal text-sm md:text-base">Connect</p>
-              <Link to="mailto:offlayout@gmail.com">
-                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+              <a href="mailto:offlayout@gmail.com">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base transition-colors duration-200">
                   Email
                 </p>
-              </Link>
-              <Link to="https://x.com/offlayout">
-                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+              </a>
+
+              <a
+                href="https://x.com/offlayout_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base transition-colors duration-200">
                   X/Twitter
                 </p>
-              </Link>
-              <Link to="https://t.me/offlayout">
-                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+              </a>
+
+              <a
+                href="https://t.me/onest_styles"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base transition-colors duration-200">
                   Telegram
                 </p>
-              </Link>
+              </a>
             </span>
           </div>
         </div>

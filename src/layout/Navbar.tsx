@@ -229,15 +229,29 @@ export default function Navbar() {
             })}
             <div className="mt-4 space-y-1">
               <p className="font-display font-normal text-sm">Connect</p>
-              <p className="text-[#B3B3B3] font-display font-normal text-sm">
-                Email
-              </p>
-              <p className="text-[#B3B3B3] font-display font-normal text-sm">
-                X/Twiter
-              </p>
-              <p className="text-[#B3B3B3] font-display font-normal text-sm">
-                Telegram
-              </p>
+              <a href="mailto:offlayout@gmail.com">
+                <p className="text-[#B3B3B3] font-display font-normal text-sm">
+                  Email
+                </p>
+              </a>
+              <a
+                href="https://x.com/offlayout_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="text-[#B3B3B3] font-display font-normal text-sm">
+                  X/Twiter
+                </p>
+              </a>
+              <a
+                href="https://t.me/onest_styles"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="text-[#B3B3B3] font-display font-normal text-sm">
+                  Telegram
+                </p>
+              </a>
             </div>
             <button
               onClick={openModal}
