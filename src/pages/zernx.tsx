@@ -20,6 +20,7 @@ export default function ZernX() {
             </button>
           </Link>
 
+          <a href="https://zernx.com" target="_blank" rel="noopener noreferrer">
           <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer">
             View Live
             <img
@@ -28,6 +29,7 @@ export default function ZernX() {
               className="w-4 h-4 md:w-5 md:h-5"
             />
           </button>
+          </a>
         </nav>
       </header>
 

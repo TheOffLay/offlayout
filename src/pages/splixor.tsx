@@ -57,48 +57,15 @@ export default function Splixor() {
           <img
             src="/assets/splixor/card1.webp"
             alt="snapshot of splixor card"
-            className="w-full h-auto rounded-2xl"
+            className="hidden md:block w-full h-auto rounded-2xl"
+          />
+          <img
+            src="/assets/splixor/card1-m.png"
+            alt="snapshot of splixor card"
+            className="block md:hidden w-full h-auto rounded-2xl"
           />
         </div>
         <div className="w-full max-w-232 mx-auto mt-10 md:mt-25 flex flex-col md:flex-row justify-between md:gap-24">
-          {/* <div className="flex flex-col gap-6">
-            <span>
-              <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl">
-                Company
-              </p>
-              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
-                Splixor
-              </p>
-            </span>
-            <span>
-              <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl">
-                Duration
-              </p>
-              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
-                2 weeks
-              </p>
-            </span>
-            <span>
-              <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl">
-                Project scope
-              </p>
-              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
-                UI/UX design
-              </p>
-              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
-                Product Thinking
-              </p>
-              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
-                Interaction Design
-              </p>
-              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
-                Visual Design
-              </p>
-              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
-                Prototyping
-              </p>
-            </span>
-          </div> */}
           <div className="flex flex-col gap-6 shrink-0 md:min-w-50">
             <span>
               <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl">
@@ -163,22 +130,36 @@ export default function Splixor() {
           </div>
         </div>
 
-        {/* <div className="mt-6 md:mt-12 2xl:mt-20 bg-[#1E1E1E] rounded-2xl w-full h-100 md:h-120 2xl:h-160"> */}
-        <div className="mt-6 md:mt-12 2xl:mt-20 w-full h-auto grid grid-cols-1 lg:grid-cols-3 gap-1 place-items-center">
+        <div className="mt-6 md:mt-12 2xl:mt-20 w-full h-auto grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-3 place-items-center">
           <img
             src="/assets/splixor/card2.webp"
             alt="snapshot of splixor card"
-            className="rounded-2xl w-full"
+            className="hidden md:block rounded-2xl w-full"
+          />
+          <img
+            src="/assets/splixor/card2-m.png"
+            alt="snapshot of splixor card"
+            className="block md:hidden rounded-2xl w-full"
           />
           <img
             src="/assets/splixor/card3.webp"
             alt="snapshot of splixor card"
-            className="rounded-2xl w-full"
+            className="hidden md:block rounded-2xl w-full"
+          />
+          <img
+            src="/assets/splixor/card3-m.png"
+            alt="snapshot of splixor card"
+            className="block md:hidden rounded-2xl w-full"
           />
           <img
             src="/assets/splixor/card4.webp"
             alt="snapshot of splixor card"
-            className="rounded-2xl w-full"
+            className="hidden md:block rounded-2xl w-full"
+          />
+          <img
+            src="/assets/splixor/card4-m.png"
+            alt="snapshot of splixor card"
+            className="block md:hidden rounded-2xl w-full"
           />
         </div>
         <div className="w-full max-w-232 mx-auto mt-10 md:mt-25">
