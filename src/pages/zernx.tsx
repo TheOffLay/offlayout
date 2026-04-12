@@ -5,36 +5,38 @@ export default function ZernX() {
   const { openModal } = useModal();
   return (
     <>
-      <header className="max-w-280 2xl:max-w-325 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
-        <Link to="/">
-          <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] hover:from-[#E5E5E5] hover:to-[#C4C4C4] border-2 border-[#2E2E2E] rounded-full cursor-pointer transition-all duration-300 ease-in-out">
+      <header className="fixed top-0 left-0 w-full z-50 bg-black/75 backdrop-blur-xl h-20">
+        <nav className="max-w-280 2xl:max-w-318 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
+          <Link to="/">
+            <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] hover:from-[#E5E5E5] hover:to-[#C4C4C4] border-2 border-[#2E2E2E] rounded-full cursor-pointer transition-all duration-300 ease-in-out">
+              <img
+                src="/assets/full/arrow-left.svg"
+                alt="Go back"
+                className="w-4 h-4 md:w-5 md:h-5"
+              />
+              <span className="hidden md:block text-white font-display font-medium text-base">
+                Go home
+              </span>
+            </button>
+          </Link>
+
+          <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer">
+            View Live
             <img
-              src="/assets/full/arrow-left.svg"
-              alt="Go back"
+              src="/assets/full/link-square.svg"
+              alt="External link"
               className="w-4 h-4 md:w-5 md:h-5"
             />
-            <span className="hidden md:block text-white font-display font-medium text-base">
-              Go home
-            </span>
           </button>
-        </Link>
-
-        <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer">
-          View Live
-          <img
-            src="/assets/full/link-square.svg"
-            alt="External link"
-            className="w-4 h-4 md:w-5 md:h-5"
-          />
-        </button>
+        </nav>
       </header>
 
-      <section className="max-w-280 2xl:max-w-300 mx-auto px-4 md:px-6 mt-10 md:mt-16 2xl:mt-20">
+      <section className="max-w-280 2xl:max-w-318 mx-auto px-4 md:px-6 pt-28 md:pt-32 2xl:pt-36">
         <div>
           <img
             src="/assets/zernx/zernx-logo.svg"
             alt=""
-            className="w-12 h-12 md:16 md:h-16"
+            className="w-8 h-8 md:w-10 md:h-w-10"
           />
           <h1 className="mt-6 font-display font-medium text-3xl md:text-4xl 2xl:text-5xl">
             ZernX
@@ -117,17 +119,24 @@ export default function ZernX() {
             alt="snapshot of zernx cta page"
             className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
           />
-          <div>
+          <div className="mt-1 relative w-full rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center">
+            <img
+              src="/assets/zernx/presentation mode.webp"
+              alt="Presentation Background"
+              className="w-full h-auto block object-cover"
+            />
+            <div className="absolute z-10 w-[89%] md:w-[89%] 2xl:w-[89%] rounded-xl md:rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.6)] bg-[#0A0A0A]">
               <video
-                src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775674830/zernx-presentation_fgrroy.mov"
+                src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775674830/zernx-presentation_fgrroy.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-contain rounded-2xl"
+                className="w-full h-auto object-cover block"
               />
             </div>
           </div>
+        </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
           <h2 className="font-display font-medium text-3xl md:text-6xl text-center">
