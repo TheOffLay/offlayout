@@ -37,7 +37,7 @@ export default function Splixor() {
       <section className="max-w-280 2xl:max-w-318 mx-auto px-4 md:px-6 pt-28 md:pt-32 2xl:pt-36">
         <div className="flex flex-col justify-center items-center">
           <img
-            src="/assets/zernx/zernx-logo.svg"
+            src="/assets/splixor/splixor-logo.svg"
             alt=""
             className="w-8 h-8 md:w-10 md:h-w-10"
           />
