@@ -7,27 +7,30 @@ export default function Splixor() {
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-black/75 backdrop-blur-xl h-20">
         <nav className="max-w-280 2xl:max-w-318 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
-        <Link to="/">
-          <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] border-2 border-[#2E2E2E] rounded-full cursor-pointer">
-            <img
-              src="/assets/full/arrow-left.svg"
-              alt="Go back"
-              className="w-4 h-4 md:w-5 md:h-5"
-            />
-            <span className="hidden md:block text-white font-display font-medium text-base">
-              Go home
-            </span>
-          </button>
-        </Link>
+          <Link to="/">
+            <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] hover:bg-[#2A2A2A] border-2 border-[#2E2E2E] hover:border-[#3A3A3A] transition-colors duration-200 ease-in-out rounded-full cursor-pointer">
+              <img
+                src="/assets/full/arrow-left.svg"
+                alt="Go back"
+                className="w-4 h-4 md:w-5 md:h-5"
+              />
+              <span className="hidden md:block text-white font-display font-medium text-base">
+                Go home
+              </span>
+            </button>
+          </Link>
 
-        <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer">
+          {/* <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] hover:from-[#E5E5E5] hover:to-[#C4C4C4] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer transition-all duration-300 ease-in-out">
           View Live
           <img
             src="/assets/full/link-square.svg"
             alt="External link"
             className="w-4 h-4 md:w-5 md:h-5"
           />
-        </button>
+        </button> */}
+          <div className="p-3 bg-[#171717] border border-[#2E2E2E] shadow-[inset_0_0_0_3px_#000000] rounded-full w-10 h-10 md:w-14 md:h-14 2xl:w-16 2xl:h-16 flex flex-col items-center justify-center cursor-not-allowed group">
+            <img src="/assets/work/unlink-02.svg" alt="External link" />
+          </div>
         </nav>
       </header>
 
@@ -58,7 +61,7 @@ export default function Splixor() {
           />
         </div>
         <div className="w-full max-w-232 mx-auto mt-10 md:mt-25 flex flex-col md:flex-row justify-between md:gap-24">
-          <div className="flex flex-col gap-6">
+          {/* <div className="flex flex-col gap-6">
             <span>
               <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl">
                 Company
@@ -77,6 +80,45 @@ export default function Splixor() {
             </span>
             <span>
               <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl">
+                Project scope
+              </p>
+              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
+                UI/UX design
+              </p>
+              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
+                Product Thinking
+              </p>
+              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
+                Interaction Design
+              </p>
+              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
+                Visual Design
+              </p>
+              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
+                Prototyping
+              </p>
+            </span>
+          </div> */}
+          <div className="flex flex-col gap-6 shrink-0 md:min-w-50">
+            <span>
+              <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl">
+                Company
+              </p>
+              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
+                Splixor
+              </p>
+            </span>
+            <span>
+              <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl">
+                Duration
+              </p>
+              <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
+                2 weeks
+              </p>
+            </span>
+            
+            <span className="whitespace-nowrap">
+              <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl pb-1">
                 Project scope
               </p>
               <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
@@ -281,7 +323,7 @@ export default function Splixor() {
           </div>
 
           {/* fifth video  */}
-            <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
             {/* 1. The Wide, Diffused Outer Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
 
@@ -333,7 +375,7 @@ export default function Splixor() {
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
-            <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
             {/* 1. The Wide, Diffused Outer Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
 

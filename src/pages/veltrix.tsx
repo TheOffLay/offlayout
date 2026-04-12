@@ -7,20 +7,20 @@ export default function Veltrix() {
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-black/75 backdrop-blur-xl h-20">
         <nav className="max-w-280 2xl:max-w-318 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
-        <Link to="/">
-          <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] border-2 border-[#2E2E2E] rounded-full cursor-pointer">
-            <img
-              src="/assets/full/arrow-left.svg"
-              alt="Go back"
-              className="w-4 h-4 md:w-5 md:h-5"
-            />
-            <span className="hidden md:block text-white font-display font-medium text-base">
-              Go home
-            </span>
-          </button>
-        </Link>
+          <Link to="/">
+            <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] hover:bg-[#2A2A2A] border-2 border-[#2E2E2E] hover:border-[#3A3A3A] transition-colors duration-200 ease-in-out rounded-full cursor-pointer">
+              <img
+                src="/assets/full/arrow-left.svg"
+                alt="Go back"
+                className="w-4 h-4 md:w-5 md:h-5"
+              />
+              <span className="hidden md:block text-white font-display font-medium text-base">
+                Go home
+              </span>
+            </button>
+          </Link>
 
-        {/* <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] hover:from-[#E5E5E5] hover:to-[#C4C4C4] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer transition-all duration-300 ease-in-out">
+          {/* <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] hover:from-[#E5E5E5] hover:to-[#C4C4C4] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer transition-all duration-300 ease-in-out">
           View Live
           <img
             src="/assets/full/link-square.svg"
@@ -28,9 +28,9 @@ export default function Veltrix() {
             className="w-4 h-4 md:w-5 md:h-5"
           />
         </button> */}
-        <div className="p-3 bg-[#171717] border border-[#2E2E2E] shadow-[inset_0_0_0_3px_#000000] rounded-full w-10 h-10 md:w-14 md:h-14 2xl:w-16 2xl:h-16 flex flex-col items-center justify-center cursor-not-allowed group">
-          <img src="/assets/work/unlink-02.svg" alt="External link" />
-        </div>
+          <div className="p-3 bg-[#171717] border border-[#2E2E2E] shadow-[inset_0_0_0_3px_#000000] rounded-full w-10 h-10 md:w-14 md:h-14 2xl:w-16 2xl:h-16 flex flex-col items-center justify-center cursor-not-allowed group">
+            <img src="/assets/work/unlink-02.svg" alt="External link" />
+          </div>
         </nav>
       </header>
 
@@ -113,14 +113,23 @@ export default function Veltrix() {
             alt="snapshot of tokens traded on veltrix page"
             className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
           />
-          <video
-            src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775674852/veltrix-presentation_shzqoh.mov"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="max-w-full h-full object-contain rounded-2xl"
-          />
+          <div className="mt-0.5 md:mt-1 relative w-full rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center">
+            <img
+              src="/assets/veltrix/presentation mode.webp"
+              alt="Presentation Background"
+              className="w-full h-auto block object-cover"
+            />
+            <div className="absolute z-10 w-[89%] md:w-[89%] 2xl:w-[89%] rounded-xl md:rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.6)] bg-[#0A0A0A]">
+              <video
+                src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775674852/veltrix-presentation_shzqoh.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="max-w-full h-full object-contain rounded-2xl"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">
