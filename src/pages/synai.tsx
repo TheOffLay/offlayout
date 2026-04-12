@@ -111,14 +111,24 @@ export default function Synai() {
             alt="snapshot of syn.ai how it works page"
             className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
           />
-          <video
-            src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775674835/synai-presentation_hlisft.mov"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="max-w-full h-full object-contain rounded-2xl"
-          />
+
+          <div className="mt-0.5 md:mt-1 relative w-full rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center">
+            <img
+              src="/assets/synai/presentation mode.webp"
+              alt="Presentation Background"
+              className="w-full h-auto block object-cover"
+            />
+            <div className="absolute z-10 w-[89%] md:w-[89%] 2xl:w-[89%] rounded-xl md:rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.6)] bg-[#0A0A0A]">
+              <video
+                src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775674835/synai-presentation_hlisft.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="max-w-full h-full object-contain rounded-2xl"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="w-full mt-20 md:mt-20 2xl:mt-26">

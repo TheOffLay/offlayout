@@ -119,7 +119,7 @@ export default function ZernX() {
             alt="snapshot of zernx cta page"
             className="rounded-2xl md:rounded-3xl border-2 border-[#1E1E1E] p-1 shadow-[0_20px_50px_-12px_#1E1E1E]"
           />
-          <div className="mt-1 relative w-full rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center">
+          <div className="mt-0.5 md:mt-1 relative w-full rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center">
             <img
               src="/assets/zernx/presentation mode.webp"
               alt="Presentation Background"
