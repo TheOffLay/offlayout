@@ -401,7 +401,7 @@ export default function Splixor() {
           <div className="flex items-center justify-center mt-4 md:mt-8">
             <button
               onClick={openModal}
-              className="cursor-pointer flex items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors"
+              className="cursor-pointer flex items-center gap-2 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors"
             >
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>
               Book a consultation

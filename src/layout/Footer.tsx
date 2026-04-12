@@ -5,18 +5,18 @@ export default function Footer() {
     <>
       <footer className="max-w-280 2xl:max-w-318 mx-auto px-4 lg:px-6 mt-8 md:mt-16">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-8 md:space-y-0">
-          <span className="space-y-1">
+          <span className="space-y-2">
             <p className="font-normal text-sm md:text-base">Clients</p>
             <a
               href="https://zernx.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+              <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base mb-1">
                 ZernX
               </p>
             </a>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-1">
               <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
                 Splixor
               </p>
@@ -28,22 +28,22 @@ export default function Footer() {
               <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
                 Syn.ai
               </p>
-                <p className="font-display font-normal text-[10px] text-xs rounded-full p-1 text-[#7A7A7A] border border-[#1E1E1E]">
+              <p className="font-display font-normal text-[10px] text-xs rounded-full p-1 text-[#7A7A7A] border border-[#1E1E1E]">
                 Coming soon
               </p>
             </div>
           </span>
 
           <div className="flex flex-col md:flex-row md:items-center md:gap-16 space-y-8 md:space-y-0">
-            <span className="space-y-1">
+            <span className="space-y-2">
               <p className="font-normal text-sm md:text-base">Menu</p>
               <a href="#work">
-                <p className=" text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+                <p className=" text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base mb-1">
                   Work
                 </p>
               </a>
               <a href="#templates">
-                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base mb-1">
                   Templates
                 </p>
               </a>
@@ -54,10 +54,10 @@ export default function Footer() {
               </a>
             </span>
 
-            <span className="space-y-1">
+            <span className="space-y-2">
               <p className="font-normal text-sm md:text-base">Connect</p>
               <a href="mailto:offlayout@gmail.com">
-                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base transition-colors duration-200">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base transition-colors duration-200 mb-1">
                   Email
                 </p>
               </a>
@@ -67,7 +67,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base transition-colors duration-200">
+                <p className="text-[#B3B3B3] hover:text-white font-normal text-sm md:text-base transition-colors duration-200 mb-1">
                   X/Twitter
                 </p>
               </a>

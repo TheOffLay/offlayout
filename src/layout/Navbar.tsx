@@ -227,10 +227,10 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <div className="mt-4 space-y-1">
+            <div className="mt-4 space-y-2">
               <p className="font-display font-normal text-sm">Connect</p>
               <a href="mailto:offlayout@gmail.com">
-                <p className="text-[#B3B3B3] font-display font-normal text-sm">
+                <p className="text-[#B3B3B3] font-display font-normal text-sm mb-1">
                   Email
                 </p>
               </a>
@@ -239,7 +239,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="text-[#B3B3B3] font-display font-normal text-sm">
+                <p className="text-[#B3B3B3] font-display font-normal text-sm mb-1">
                   X/Twiter
                 </p>
               </a>
@@ -255,7 +255,7 @@ export default function Navbar() {
             </div>
             <button
               onClick={openModal}
-              className="mt-4 cursor-pointer flex justify-center items-center gap-3 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors"
+              className="mt-4 cursor-pointer flex justify-center items-center gap-2 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors"
             >
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>
               Book a consultation
