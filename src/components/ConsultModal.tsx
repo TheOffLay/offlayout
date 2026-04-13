@@ -56,12 +56,13 @@ export default function ConsultationModal() {
       console.error("Submission failed", error);
     }
   };
-
   return (
     <>
-      <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
+      {/* FIX 1: Outer Wrapper. Changed p-4 to p-0 md:p-4 and items-center to items-start md:items-center */}
+      <div className="fixed inset-0 z-100 flex items-start md:items-center justify-center bg-black/80 backdrop-blur-sm p-0 md:p-4 overflow-y-auto">
         {status === "success" ? (
-          <div className="relative overflow-hidden flex flex-col items-center text-center pt-8 pb-10 px-5 animate-in fade-in zoom-in duration-300 w-full max-w-138 mx-auto bg-[#171717] border border-[#1E1E1E] rounded-2xl">
+          /* FIX 2: Success Modal. Added min-h-screen md:min-h-fit, justify-center, rounded-none md:rounded-2xl, border-0 md:border */
+          <div className="relative overflow-hidden flex flex-col items-center justify-center text-center pt-8 pb-10 px-5 animate-in fade-in zoom-in duration-300 w-full min-h-screen md:min-h-fit max-w-138 mx-auto bg-[#171717] border-0 md:border md:border-[#1E1E1E] rounded-none md:rounded-2xl">
             {/* --- STATIC CONFETTI BACKGROUND --- */}
             <div className="absolute inset-0 pointer-events-none z-0">
               {/* Left Side */}
@@ -84,7 +85,7 @@ export default function ConsultationModal() {
             </div>
             {/* ---------------------------------- */}
 
-            {/* Success Icon (Added relative z-10 so it sits ABOVE the confetti) */}
+            {/* Success Icon */}
             <div className="mb-6 relative z-10">
               <img
                 src="/assets/work/mail.svg"
@@ -121,7 +122,8 @@ export default function ConsultationModal() {
             </p>
           </div>
         ) : (
-          <div className="relative bg-[#0A0A0A] mt-100 md:mt-150 2xl:mt-50 w-full max-w-99 lg:max-w-150 mx-auto px-5 py-8 rounded-2xl border border-[#2A2A2A]">
+          /* FIX 3: Form Modal. Added mt-0, min-h-screen md:min-h-fit, rounded-none md:rounded-2xl, border-0 md:border */
+          <div className="relative bg-[#0A0A0A] mt-0 md:mt-150 2xl:mt-50 w-full min-h-screen md:min-h-fit max-w-99 lg:max-w-150 mx-auto px-5 py-8 rounded-none md:rounded-2xl border-0 md:border md:border-[#2A2A2A]">
             <div className="flex items-center justify-between mb-6 lg:mb-10">
               <img
                 src="/assets/navbar/logo.svg"
@@ -231,7 +233,7 @@ export default function ConsultationModal() {
 
                 {/* Dropdown Menu */}
                 {isBudgetOpen && (
-                  <div className="absolute top-[calc(100%+8px)] left-0 max-w-45 lg:max-w-[256px] bg-[#171717] border border-[#2A2A2A] rounded-2xl p-2 z-50 shadow-2xl">
+                  <div className="absolute top-[calc(100%+8px)] left-0 w-full max-w-45 lg:max-w-[256px] bg-[#171717] border border-[#2A2A2A] rounded-2xl p-2 z-50 shadow-2xl">
                     <div className="flex flex-col gap-1">
                       {budgetOptions.map((option) => {
                         const isSelected = selectedBudget === option;
@@ -273,7 +275,6 @@ export default function ConsultationModal() {
                   </div>
                 )}
 
-                {/* Hidden input to ensure form submission still captures the data if using native actions */}
                 <input type="hidden" name="budget" value={selectedBudget} />
               </div>
 
