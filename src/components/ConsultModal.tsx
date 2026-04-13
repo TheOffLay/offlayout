@@ -178,7 +178,7 @@ export default function ConsultationModal() {
                 <input
                   type="text"
                   name="telegram"
-                  placeholder="t.me//"
+                  placeholder="@handle"
                   className="w-full bg-[#111111] border border-[#1E1E1E] rounded-xl px-4 py-3 text-sm text-white placeholder:text-[#555555] focus:outline-none focus:border-white transition-colors"
                 />
               </div>
@@ -281,7 +281,7 @@ export default function ConsultationModal() {
               {/* Availability */}
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-medium text-white">
-                  When are you available?
+                  Preferred time to chat
                 </label>
                 <div className="grid grid-cols-2 gap-4">
                   <input
