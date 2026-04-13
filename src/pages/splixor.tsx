@@ -20,8 +20,15 @@ export default function Splixor() {
             </button>
           </Link>
 
-          <div className="p-3 bg-[#171717] border border-[#2E2E2E] shadow-[inset_0_0_0_3px_#000000] rounded-full w-10 h-10 md:w-14 md:h-14 2xl:w-16 2xl:h-16 flex flex-col items-center justify-center cursor-not-allowed group">
+          {/* <div className="p-3 bg-[#171717] border border-[#2E2E2E] shadow-[inset_0_0_0_3px_#000000] rounded-full w-10 h-10 md:w-14 md:h-14 2xl:w-16 2xl:h-16 flex flex-col items-center justify-center cursor-not-allowed group">
             <img src="/assets/work/unlink-02.svg" alt="External link" />
+          </div> */}
+          <div className="bg-[#171717] border border-[#2E2E2E] shadow-[inset_0_0_0_3px_#000000] rounded-full w-10 h-10 md:w-11 md:h-11 flex flex-col items-center justify-center cursor-not-allowed group">
+            <img
+              src="/assets/work/unlink-02.svg"
+              alt="External link"
+              className="w-4 h-4 md:w-5 md:h-5"
+            />
           </div>
         </nav>
       </header>
