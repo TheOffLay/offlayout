@@ -5,8 +5,8 @@ export default function Synai() {
   const { openModal } = useModal();
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-black/75 backdrop-blur-xl h-20">
-        <nav className="max-w-280 2xl:max-w-318 mx-auto px-4 md:px-6 h-16 pt-6 flex items-center justify-between">
+      <header className="fixed top-0 left-0 w-full z-50 bg-black/75 backdrop-blur-xl">
+        <nav className="max-w-280 2xl:max-w-318 mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/">
             <button className="flex items-center justify-center w-10 h-10 md:w-auto md:h-auto md:py-2 md:px-4 md:gap-1 bg-[#1E1E1E] hover:bg-[#2A2A2A] border-2 border-[#2E2E2E] hover:border-[#3A3A3A] transition-colors duration-200 ease-in-out rounded-full cursor-pointer">
               <img
@@ -20,14 +20,6 @@ export default function Synai() {
             </button>
           </Link>
 
-          {/* <button className="flex items-center gap-2.5 bg-linear-to-br from-[#C4C4C4] via-white to-[#E5E5E5] hover:from-[#E5E5E5] hover:to-[#C4C4C4] border border-black ring-1 ring-white ring-offset-1 ring-offset-black rounded-full py-2 px-2 md:px-3 text-black font-display font-medium text-xs md:text-base cursor-pointer transition-all duration-300 ease-in-out">
-          View Live
-          <img
-            src="/assets/full/link-square.svg"
-            alt="External link"
-            className="w-4 h-4 md:w-5 md:h-5"
-          />
-        </button> */}
           <div className="p-3 bg-[#171717] border border-[#2E2E2E] shadow-[inset_0_0_0_3px_#000000] rounded-full w-10 h-10 md:w-14 md:h-14 2xl:w-16 2xl:h-16 flex flex-col items-center justify-center cursor-not-allowed group">
             <img src="/assets/work/unlink-02.svg" alt="External link" />
           </div>
