@@ -122,7 +122,7 @@ export default function Splixor() {
           </div>
         </div>
 
-        <div className="mt-6 md:mt-12 2xl:mt-20 w-full h-auto grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-3 place-items-center">
+        <div className="mt-10 md:mt-25 w-full h-auto grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-3 place-items-center">
           <img
             src="/assets/splixor/card2.webp"
             alt="snapshot of splixor card"
@@ -199,38 +199,33 @@ export default function Splixor() {
               onboarding complexity or technical explanations.
             </p>
           </div>
-
-          <div className="flex flex-col md:flex-row md:gap-24">
-            <p className="font-display font-medium text-sm md:text-lg 2xl:text-xl mb-2 md:mb-0 w-full md:max-w-30 mx-auto">
-              The solution
-            </p>
-
-            <p className="font-display font-regular text-[#B3B3B3] text-sm md:text-lg 2xl:text-xl">
-              The MVP introduced a lightweight interface where users could view
-              available subscription pools and join them through a clear
-              contribution flow. Each subscription displayed only necessary
-              information such as cost breakdown and remaining slots. The
-              solution focused on proving usability and desirability rather than
-              building advanced automation at an early stage.
-            </p>
-          </div>
         </div>
 
-        <div className="w-full mt-20 md:mt-20 2xl:mt-26">
+        <div className="w-full mt-10 md:mt-25">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
             <img
               src="/assets/splixor/card5.webp"
               alt="snapshot of splixor card"
-              className="rounded-2xl w-full"
+              className="hidden md:block rounded-2xl w-full"
+            />
+            <img
+              src="/assets/splixor/card5-m.png"
+              alt="snapshot of splixor card"
+              className="block md:hidden rounded-2xl w-full"
             />
             <img
               src="/assets/splixor/card6.webp"
               alt="snapshot of splixor card"
-              className="rounded-2xl w-full"
+              className="hidden md:block rounded-2xl w-full"
+            />
+            <img
+              src="/assets/splixor/card6-m.png"
+              alt="snapshot of splixor card"
+              className="block md:hidden rounded-2xl w-full"
             />
           </div>
 
-          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-2 md:mt-3">
             {/* 1. The Wide, Diffused Outer Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
 
@@ -264,7 +259,7 @@ export default function Splixor() {
             </div>
           </div>
 
-          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-10 md:mt-25">
             {/* 1. The Wide, Diffused Outer Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
 
@@ -282,21 +277,31 @@ export default function Splixor() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mt-2 md:mt-3">
             <img
-              src="/assets/splixor/card5.webp"
+              src="/assets/splixor/card7.webp"
               alt="snapshot of splixor card"
-              className="rounded-2xl w-full"
+              className="hidden md:block rounded-2xl w-full"
             />
             <img
-              src="/assets/splixor/card6.webp"
+              src="/assets/splixor/card7-m.png"
               alt="snapshot of splixor card"
-              className="rounded-2xl w-full"
+              className="block md:hidden rounded-2xl w-full"
+            />
+            <img
+              src="/assets/splixor/card8.webp"
+              alt="snapshot of splixor card"
+              className="hidden md:block rounded-2xl w-full"
+            />
+            <img
+              src="/assets/splixor/card8-m.png"
+              alt="snapshot of splixor card"
+              className="block md:hidden rounded-2xl w-full"
             />
           </div>
 
           {/* fifth video  */}
-          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
+          <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-2 md:mt-3">
             {/* 1. The Wide, Diffused Outer Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>
 
@@ -347,7 +352,7 @@ export default function Splixor() {
           </div>
         </div>
 
-        <div className="w-full mt-20 md:mt-20 2xl:mt-26">
+        <div className="w-full mt-10 md:mt-25">
           <div className="relative w-full aspect-video bg-[#4F46E5] overflow-hidden rounded-2xl mt-5">
             {/* 1. The Wide, Diffused Outer Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] aspect-square bg-[#FF3C88]/50 rounded-full blur-[60px] md:blur-[140px] pointer-events-none"></div>

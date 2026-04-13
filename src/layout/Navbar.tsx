@@ -140,14 +140,20 @@ export default function Navbar() {
                 className="w-4 h-4 md:w-6 md:h-6"
               />
             </button> */}
-            <button className="whitespace-nowrap min-w-25 md:min-w-30 flex justify-center items-center gap-1 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black py-2 px-2 md:px-3 rounded-full text-xs md:text-sm 2xl:text-base font-display font-medium cursor-pointer">
-              Get in touch
-              <img
-                src="./assets/navbar/arrow-black.svg"
-                alt="Arrow Right"
-                className="w-4 h-4 md:w-6 md:h-6"
-              />
-            </button>
+            <a
+              href="https://t.me/onest_styles"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="whitespace-nowrap min-w-25 md:min-w-30 flex justify-center items-center gap-1 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black py-2 px-2 md:px-3 rounded-full text-xs md:text-sm 2xl:text-base font-display font-medium cursor-pointer">
+                Get in touch
+                <img
+                  src="./assets/navbar/arrow-black.svg"
+                  alt="Arrow Right"
+                  className="w-4 h-4 md:w-6 md:h-6"
+                />
+              </button>
+            </a>
 
             <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
               {isOpen ? (
