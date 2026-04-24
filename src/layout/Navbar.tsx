@@ -1,14 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import Menu from "/assets/navbar/menu.svg";
 import Cancel from "/assets/navbar/cancel.svg";
 import Ellipse from "/assets/navbar/ellipse.svg";
-import { useModal } from "../context/ModalContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const { hash } = useLocation();
-  const { openModal } = useModal();
 
   // --- DRAG TO CLOSE STATE ---
   const [dragY, setDragY] = useState(0);
@@ -260,7 +259,7 @@ export default function Navbar() {
               </a>
             </div>
             <button
-              onClick={openModal}
+              onClick={() => navigate("/consult")}
               className="mt-4 cursor-pointer flex justify-center items-center gap-2 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors"
             >
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useModal } from "../context/ModalContext";
+import { Link } from "react-router";
 
 const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
   {
@@ -8,14 +9,17 @@ const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
     answer: (
       <>
         OffLayout is led by{" "}
-        <a
+        {/* <a
           href="https://x.com/oneststyles"
           target="_blank"
           rel="noreferrer"
           className="underline underline-offset-2 decoration-white"
         >
           Styles
-        </a>
+        </a> */}
+        <Link to="/styles" className="underline underline-offset-2 decoration-white">
+          Styles
+        </Link>
         , a designer and builder with a passion for turning ideas into real,
         working products. Together with a small team of dedicated creators,
         OffLayout focuses on delivering thoughtful, functional, and visually
