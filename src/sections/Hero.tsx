@@ -36,7 +36,7 @@ export default function Hero() {
         </p>
 
         {/* Action Button */}
-        <button onClick={() => navigate("/consult")} className="cursor-pointer flex items-center gap-2 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
+        <button onClick={() => navigate("/book-a-consultation")} className="cursor-pointer flex items-center gap-2 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors">
           <span className="w-2 h-2 rounded-full animate-colorblink"></span>
           Book a consultation
         </button>

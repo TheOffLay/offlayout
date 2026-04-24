@@ -316,7 +316,7 @@ export default function Consult() {
             <p className="relative z-10 mt-4 md:mt-6 font-display font-normal text-sm text-[#B3B3B3]">
               Need a quick reply?{" "}
               <a
-                href="https://t.me/yourtelegramhandle"
+                href="https://t.me/offlayout"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#60A5FA] font-display font-normal hover:underline"

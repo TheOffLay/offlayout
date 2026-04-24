@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useModal } from "../context/ModalContext";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
   {
@@ -67,7 +66,7 @@ const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
 
 export default function Faqs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { openModal } = useModal();
+  const navigate = useNavigate();
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -164,7 +163,7 @@ export default function Faqs() {
 
           <div className="mt-5 md:mt-10 flex items-center justify-center">
             <button
-              onClick={openModal}
+              onClick={() => navigate("/book-a-consultation")}
               className="cursor-pointer flex items-center gap-2 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors"
             >
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>

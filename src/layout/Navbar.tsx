@@ -259,7 +259,7 @@ export default function Navbar() {
               </a>
             </div>
             <button
-              onClick={() => navigate("/consult")}
+              onClick={() => navigate("/book-a-consultation")}
               className="mt-4 cursor-pointer flex justify-center items-center gap-2 bg-white text-black px-3 py-3 rounded-full text-sm md:text-base font-display font-medium hover:bg-gray-200 transition-colors"
             >
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>

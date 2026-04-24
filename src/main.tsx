@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       { path: "/splixor-case-study", element: <Splixor /> },
       { path: "/veltrix-case-study", element: <Veltrix /> },
       { path: "/synai-case-study", element: <Synai /> },
-      { path: "/consult", element: <Consult /> },
+      { path: "/book-a-consultation", element: <Consult /> },
       { path: "/styles", element: <Styles /> },
 
     ],
