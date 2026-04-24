@@ -140,7 +140,7 @@ export default function Navbar() {
               />
             </button> */}
             <a
-              href="https://t.me/onest_styles"
+              href="https://t.me/offlayout"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -249,7 +249,7 @@ export default function Navbar() {
                 </p>
               </a>
               <a
-                href="https://t.me/onest_styles"
+                href="https://t.me/offlayout"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -73,7 +73,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://t.me/onest_styles"
+                href="https://t.me/offlayout"
                 target="_blank"
                 rel="noopener noreferrer"
               >
