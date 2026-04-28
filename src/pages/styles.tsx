@@ -41,7 +41,7 @@ export default function Styles() {
           <p className="py-6 md:py-10 font-display font-normal text-[#B3B3B3] text-sm md:text-lg leading-relaxed mb-8 w-full max-w-150">
             I'm Honest, but most people know me as{" "}
             <span className="text-white">Styles</span>. I lead{" "}
-            <span className="text-white">design at Offlayout</span>
+            <span className="text-white">design at OffLayout</span>
             , a design partner platform. I build products used by many, and
             designers often share and reference my work across Figma and X.
             <br className="hidden sm:block" />
