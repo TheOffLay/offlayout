@@ -107,7 +107,7 @@ export default function BookCallGraphic() {
           </span>
           <motion.div
             layout
-            className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-display text-xs font-bold overflow-hidden ml-2 shadow-sm"
+            className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-display text-xs font-bold overflow-hidden ml-2 shadow-sm w-[100px] text-center"
             style={{ 
               background: "linear-gradient(180deg, #FFFFFF 0%, #A3A3A3 100%)",
               color: "#000000" 

@@ -12,8 +12,8 @@ export default function DesignBuildGraphic() {
     <div className="relative w-full aspect-[303/276] rounded-2xl overflow-hidden bg-[#0F0F0F] border border-white/5 shadow-2xl">
       {/* Background Curved Tracks */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-[-50%] left-[-10%] w-[120%] h-[100%] bg-[#1A1A1A] rounded-[100%] opacity-20 border-b border-white/10" />
-        <div className="absolute bottom-[-50%] left-[-10%] w-[120%] h-[100%] bg-[#1A1A1A] rounded-[100%] opacity-20 border-t border-white/10" />
+        <div className="absolute top-[-65%] left-[-10%] w-[120%] h-[100%] bg-[#1A1A1A] rounded-[100%] opacity-20 border-b border-white/10" />
+        <div className="absolute bottom-[-60%] left-[-10%] w-[120%] h-[100%] bg-[#1A1A1A] rounded-[100%] opacity-20 border-t border-white/10" />
       </div>
 
       {/* Center Squeeze Glow */}
@@ -62,8 +62,8 @@ export default function DesignBuildGraphic() {
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="relative group scale-110">
           {/* Intense Shield Glow */}
-          <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full scale-150 animate-pulse" />
-          <div className="absolute -inset-4 bg-white/5 blur-xl rounded-full" />
+          {/* <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full scale-150" /> */}
+          {/* <div className="absolute -inset-4 bg-white/5 blur-xl rounded-full" /> */}
           
           <img 
             src="/assets/others/fig.svg" 
