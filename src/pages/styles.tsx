@@ -1,4 +1,5 @@
 import Loader from "../components/Loader";
+import { Link } from "react-router";
 
 export default function Styles() {
   return (
@@ -51,32 +52,38 @@ export default function Styles() {
           </p>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-wrap items-center gap-3">
-            <button className="group flex items-center gap-2 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black px-4 sm:px-5 py-2.5 rounded-full text-xs md:text-base font-display font-medium hover:from-[#B3B3B3] hover:to-[#FFFFFF] transition-colors">
-              Visit OffLayout
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-              >
-                <path
-                  d="M1 11L11 1M11 1H3.5M11 1V8.5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            <button className="bg-[#171717] text-[#B3B3B3] px-4 sm:px-5 py-2.5 rounded-full text-xs md:text-base font-display font-medium">
-              My Creations
-            </button>
-            <button className="bg-[#171717] text-[#B3B3B3] px-4 sm:px-5 py-2.5 rounded-full text-xs md:text-base font-display font-medium">
-              Get in touch
-            </button>
+          <div className="flex items-center gap-3">
+            <Link to="https://offlayout.com" target="_blank">
+              <button className="cursor-pointer group flex items-center gap-2 bg-linear-to-r from-[#FFFFFF] to-[#B3B3B3] text-black px-2.5 md:px-5 py-2.5 rounded-full text-xs md:text-base font-display font-medium hover:from-[#B3B3B3] hover:to-[#FFFFFF] transition-colors">
+                Visit OffLayout
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                >
+                  <path
+                    d="M1 11L11 1M11 1H3.5M11 1V8.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </Link>
+            <Link to="https://layers.to/oneststyles" target="_blank">
+              <button className="cursor-pointer bg-[#171717] hover:bg-[#171717a0] transition-colors duration-75 text-[#B3B3B3] px-2.5 md:px-5 py-2.5 rounded-full text-xs md:text-base font-display font-medium">
+                My Creations
+              </button>
+            </Link>
+            <Link to="https://t.me/onest_styles" target="_blank">
+              <button className="cursor-pointer bg-[#171717] hover:bg-[#171717a0] transition-colors duration-75 text-[#B3B3B3] px-2.5 md:px-5 py-2.5 rounded-full text-xs md:text-base font-display font-medium">
+                Get in touch
+              </button>
+            </Link>
           </div>
 
           {/* Projects Section */}
@@ -101,7 +108,9 @@ export default function Styles() {
                   in progress...
                 </p>
               </div>
-              <p className="mt-1 text-[#7A7A7A] font-display font-regular text-xs md:text-base">Apk</p>
+              <p className="mt-1 text-[#7A7A7A] font-display font-regular text-xs md:text-base">
+                Apk
+              </p>
             </div>
           </div>
 
@@ -109,53 +118,64 @@ export default function Styles() {
           <div className="border-t border-[#1E1E1E] py-6 flex flex-row items-center justify-between">
             {/* Social/Stat Counters */}
             <div className="flex flex-row items-center gap-4 sm:gap-6">
-              {/* X / Twitter */}
-              <div className="flex items-center gap-1.5 text-[#7A7A7A] hover:text-white transition-colors cursor-pointer">
-                <svg
-                  className="w-3.25 h-3.25 sm:w-3.75 sm:h-3.75"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-                <span className="text-xs md:text-base font-display font-medium">100+</span>
-              </div>
+              <Link to="https://x.com/oneststyles" target="_blank">
+                <div className="flex items-center gap-1.5 text-[#7A7A7A] hover:text-white transition-colors cursor-pointer">
+                  <svg
+                    className="w-3.25 h-3.25 sm:w-3.75 sm:h-3.75"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  <span className="text-xs md:text-base font-display font-medium">
+                    100+
+                  </span>
+                </div>
+              </Link>
 
-              {/* Figma */}
-              <div className="flex items-center gap-1.5 text-[#7A7A7A] hover:text-white transition-colors cursor-pointer">
-                <svg
-                  className="w-3.25 h-3.25 sm:w-3.75 sm:h-3.75"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path
+              <Link to="https://linkedin.com/in/oneststyles" target="_blank">
+                <div className="flex items-center gap-1.5 text-[#7A7A7A] hover:text-white transition-colors cursor-pointer">
+                  <svg
+                    className="w-3.25 h-3.25 sm:w-3.75 sm:h-3.75"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5c1.38 0 2.632-.56 3.536-1.464C16.44 9.632 17 8.38 17 7s-.56-2.632-1.464-3.536C14.632 2.56 13.38 2 12 2zm0 10v10m0-10a5 5 0 00-5 5v5h5v-10z"
-                  />
-                </svg>
-                <span className="text-xs md:text-base font-display font-medium">400+</span>
-              </div>
+                    viewBox="0 0 24 24"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M7.5 10.5v5.5" />
+                    <path d="M7.5 7.5v.01" />
+                    <path d="M11.5 16v-5.5" />
+                    <path d="M11.5 12a2.5 2.5 0 0 1 5 0v4" />
+                  </svg>
+                  <span className="text-xs md:text-base font-display font-medium">
+                    400+
+                  </span>
+                </div>
+              </Link>
 
-              {/* Generic Circle Icon (Dribbble/Community) */}
-              <div className="flex items-center gap-1.5 text-[#7A7A7A] hover:text-white transition-colors cursor-pointer">
-                <svg
-                  className="w-3.25 h-3.25 sm:w-3.75 sm:h-3.75"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path
+              <Link to="https://instagram.com/oneststyles" target="_blank">
+                <div className="flex items-center gap-1.5 text-[#7A7A7A] hover:text-white transition-colors cursor-pointer">
+                  <svg
+                    className="w-3.25 h-3.25 sm:w-3.75 sm:h-3.75"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3-10h6"
-                  />
-                </svg>
-                <span className="text-xs md:text-base font-display font-medium">100+</span>
-              </div>
+                    viewBox="0 0 24 24"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M17.5 6.5v.01" />
+                  </svg>
+                  <span className="text-xs md:text-base font-display font-medium">
+                    100+
+                  </span>
+                </div>
+              </Link>
             </div>
 
             {/* Resume Link */}
