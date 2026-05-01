@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
+import FaqsSlideShow from "../components/FaqsSlideShow";
 
 const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
   {
@@ -16,7 +17,10 @@ const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
         >
           Styles
         </a> */}
-        <Link to="/styles" className="underline underline-offset-2 decoration-white">
+        <Link
+          to="/styles"
+          className="underline underline-offset-2 decoration-white"
+        >
           Styles
         </Link>
         , a designer and builder with a passion for turning ideas into real,
@@ -74,16 +78,8 @@ export default function Faqs() {
   return (
     <main className="px-2">
       <section className="max-w-267 2xl:max-w-312 mx-auto px-2 pt-2 rounded-3xl bg-[#0A0A0A]">
-        {/* <div className="flex items-center justify-center h-full md:h-130 2xl:h-full"> */}
         <div>
-          <video
-            src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775546920/offlayout_np8j5y.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="max-w-full h-full object-contain rounded-2xl"
-          />
+          <FaqsSlideShow />
         </div>
 
         <div
