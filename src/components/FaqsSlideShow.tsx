@@ -49,11 +49,10 @@ const slideVariants: Variants = {
   },
   exit: {
     x: 0,
-    opacity: 0,
+    opacity: 1, // or 0.99 to ensure it stays visible during the exit animation
     zIndex: 0,
     transition: {
-      x: { duration: 0 },
-      opacity: { duration: 0.4, ease: "easeIn" },
+      duration: 0.6,
     },
   },
 };
