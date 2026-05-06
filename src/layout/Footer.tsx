@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
           </span>
 
-          <div className="flex flex-col md:flex-row md:items-center md:gap-16 space-y-8 md:space-y-0">
+          <div className="flex flex-col md:flex-row md:gap-16 space-y-8 md:space-y-0">
             <span className="space-y-2">
               <p className="font-display font-normal text-sm md:text-base">Menu</p>
               <a href="#work">
@@ -73,12 +73,22 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://t.me/onest_styles"
+                href="https://t.me/offlayout"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p className="text-[#B3B3B3] hover:text-white font-display font-normal text-sm md:text-base transition-colors duration-200">
                   Telegram
+                </p>
+              </a>
+
+                <a
+                href="https://linkedin.com/company/offlayout"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-0.5 text-[#B3B3B3] hover:text-white font-display font-normal text-sm md:text-base transition-colors duration-200">
+                  LinkedIn
                 </p>
               </a>
             </span>

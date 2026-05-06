@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useModal } from "../context/ModalContext";
+import { Link, useNavigate } from "react-router";
+import FaqsSlideShow from "../components/FaqsSlideShow";
 
 const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
   {
@@ -8,14 +9,20 @@ const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
     answer: (
       <>
         OffLayout is led by{" "}
-        <a
+        {/* <a
           href="https://x.com/oneststyles"
           target="_blank"
           rel="noreferrer"
           className="underline underline-offset-2 decoration-white"
         >
           Styles
-        </a>
+        </a> */}
+        <Link
+          to="/styles"
+          className="underline underline-offset-2 decoration-white"
+        >
+          Styles
+        </Link>
         , a designer and builder with a passion for turning ideas into real,
         working products. Together with a small team of dedicated creators,
         OffLayout focuses on delivering thoughtful, functional, and visually
@@ -63,7 +70,7 @@ const faqs: { question: string; image?: string; answer: React.ReactNode }[] = [
 
 export default function Faqs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { openModal } = useModal();
+  const navigate = useNavigate();
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -71,16 +78,8 @@ export default function Faqs() {
   return (
     <main className="px-2">
       <section className="max-w-267 2xl:max-w-312 mx-auto px-2 pt-2 rounded-3xl bg-[#0A0A0A]">
-        {/* <div className="flex items-center justify-center h-full md:h-130 2xl:h-full"> */}
         <div>
-          <video
-            src="https://res.cloudinary.com/dhautz4hj/video/upload/q_auto/f_auto/v1775546920/offlayout_np8j5y.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="max-w-full h-full object-contain rounded-2xl"
-          />
+          <FaqsSlideShow />
         </div>
 
         <div
@@ -160,7 +159,7 @@ export default function Faqs() {
 
           <div className="mt-5 md:mt-10 flex items-center justify-center">
             <button
-              onClick={openModal}
+              onClick={() => navigate("/book-a-consultation")}
               className="cursor-pointer flex items-center gap-2 bg-white text-black px-3 py-3 rounded-full text-sm md:text-[15px] 2xl:text-base font-display font-medium hover:bg-gray-200 transition-colors"
             >
               <span className="w-2 h-2 rounded-full animate-colorblink"></span>
