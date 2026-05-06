@@ -49,71 +49,73 @@ export default function DesignBuildGraphic() {
   }, [glowControls]);
 
   return (
-    <div className="relative w-full aspect-[303/276] rounded-2xl overflow-hidden bg-[#0F0F0F] border border-white/5 shadow-2xl">
+    <div className="relative w-full aspect-[303/276] overflow-hidden bg-[#0F0F0F]">
       {/* Background SVG Overlay */}
       <img
         src="/assets/others/design build bg.svg"
-        className="absolute inset-0 w-full h-full object-contain opacity-40 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-contain opacity-40 pointer-events-none p-2 rounded-3xl"
         alt=""
       />
 
-      {/* Floating Icons Sequence */}
-      <div className="absolute inset-0 z-5">
-        {icons.map((icon, i) => {
-          // Calculate V-shape exit Y based on index
-          // Spreading 8 icons across the height
-          const exitY = (i - 3.5) * 45; 
-          const entryY = (i % 2 === 0 ? -50 : 50);
+      <motion.div className="relative w-full h-full scale-[0.8] sm:scale-100 origin-center">
+        {/* Floating Icons Sequence */}
+        <div className="absolute inset-0 z-5">
+          {icons.map((icon, i) => {
+            // Calculate V-shape exit Y based on index
+            // Spreading 8 icons across the height
+            const exitY = (i - 3.5) * 45; 
+            const entryY = (i % 2 === 0 ? -50 : 50);
 
-          return (
-            <motion.div
-              key={i}
-              initial={{ x: -100, y: entryY, opacity: 0, scale: 0.8 }}
-              animate={{
-                x: [-100, 150, 400],
-                y: [entryY, 0, exitY],
-                opacity: [0, 1, 1, 0],
-                scale: [0.8, 1.1, 0.8],
-              }}
-              transition={{
-                duration: 7,
-                repeat: Infinity,
-                delay: i * 2,
-                ease: "easeInOut",
-              }}
-              className="absolute top-1/2 left-0 -translate-y-1/2"
-            >
-              <div className="p-2.5 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-full shadow-2xl flex items-center justify-center">
-                {icon.type === "img" ? (
-                  <img src={icon.src} alt="" className="w-5 h-5 opacity-70" />
-                ) : (
-                  icon.content
-                )}
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
-
-      {/* Central Figma Shield & Glow */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="relative scale-110">
-          {/* Synced Glow Effect */}
-          <motion.div 
-            animate={glowControls}
-            initial={{ opacity: 0, scale: 0.8 }}
-            className="absolute inset-0 bg-white/20 blur-2xl rounded-full"
-          />
-          
-          <motion.img 
-            src="/assets/others/fig.svg" 
-            alt="Figma Shield" 
-            className="w-[110px] h-[124px] relative z-10 drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.5 }}
-          />
+            return (
+              <motion.div
+                key={i}
+                initial={{ x: -100, y: entryY, opacity: 0, scale: 0.8 }}
+                animate={{
+                  x: [-100, 150, 400],
+                  y: [entryY, 0, exitY],
+                  opacity: [0, 1, 1, 0],
+                  scale: [0.8, 1.1, 0.8],
+                }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  delay: i * 2,
+                  ease: "easeInOut",
+                }}
+                className="absolute top-1/2 left-0 -translate-y-1/2"
+              >
+                <div className="p-2.5 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-full shadow-2xl flex items-center justify-center">
+                  {icon.type === "img" ? (
+                    <img src={icon.src} alt="" className="w-5 h-5 opacity-70" />
+                  ) : (
+                    icon.content
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
-      </div>
+
+        {/* Central Figma Shield & Glow */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="relative scale-110">
+            {/* Synced Glow Effect */}
+            <motion.div 
+              animate={glowControls}
+              initial={{ opacity: 0, scale: 0.8 }}
+              className="absolute inset-0 bg-white/20 blur-2xl rounded-full"
+            />
+            
+            <motion.img 
+              src="/assets/others/fig.svg" 
+              alt="Figma Shield" 
+              className="w-[110px] h-[124px] relative z-10 drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

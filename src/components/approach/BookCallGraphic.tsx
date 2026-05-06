@@ -62,22 +62,17 @@ export default function BookCallGraphic() {
   }, [cursorControls]);
 
   return (
-    <div className="relative w-full aspect-[303/276] rounded-2xl overflow-hidden bg-[#0F0F0F] border border-white/5 shadow-2xl">
+    <div className="relative w-full aspect-[303/276] overflow-hidden bg-[#0F0F0F]">
       {/* Background SVG Overlay */}
       <img
         src="/assets/others/book call bg.svg"
-        className="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none p-2 rounded-3xl"
         alt=""
       />
 
-      {/* Rows Container */}
-      <div 
-        style={{ 
-          backgroundImage: "url('/assets/others/Frame 2147239363.svg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-        className="relative z-10 flex flex-col gap-[18px] p-5 h-full justify-center items-center"
+      {/* Rows Container with Internal Scaling */}
+      <motion.div 
+        className="w-full relative z-10 flex flex-col gap-[18px] h-full justify-center items-center scale-[0.85] sm:scale-100 origin-center"
       >
         
         {/* Row 1: Book... */}
@@ -87,7 +82,7 @@ export default function BookCallGraphic() {
             backgroundColor: activeRow === 1 ? "#2A2A2A" : "#1E1E1E",
             scale: activeRow === 1 ? 1.02 : 1,
           }}
-          className="w-[160px] border rounded-[10px] p-[8px_12px] flex flex-col gap-1.5 transition-all duration-500 shadow-lg"
+          className="w-[80%] max-w-[160px] border rounded-[10px] p-[8px_12px] flex flex-col gap-1.5 transition-all duration-500 shadow-lg"
         >
           <span className="text-[#B3B3B3] font-display text-sm font-medium">Book...</span>
           <div className="h-2 w-full bg-[#2E2E2E] rounded-full overflow-hidden">
@@ -107,14 +102,14 @@ export default function BookCallGraphic() {
             backgroundColor: activeRow === 2 ? "#2A2A2A" : "#1E1E1E",
             scale: activeRow === 2 ? 1.02 : 1,
           }}
-          className="w-full max-w-[245px] border rounded-[10px] p-2 flex items-center justify-between transition-all duration-500 shadow-lg"
+          className="w-full max-w-[95%] sm:max-w-[245px] border rounded-[10px] p-2 flex items-center justify-between transition-all duration-500 shadow-lg"
         >
           <span className="text-[#B3B3B3] font-display text-xs md:text-sm pl-1 whitespace-nowrap font-medium">
             <span className="opacity-60">Fill / Share /</span> Vision
           </span>
           <motion.div
             layout
-            className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-display text-xs font-bold overflow-hidden ml-2 shadow-sm w-[100px] text-center"
+            className="flex-shrink-0 flex items-center justify-center gap-1.5 px-2 md:px-3 py-1.5 rounded-lg font-display text-xs font-bold overflow-hidden ml-2 shadow-sm w-[90px] md:w-[100px]"
             style={{ 
               background: "linear-gradient(180deg, #FFFFFF 0%, #A3A3A3 100%)",
               color: "#000000" 
@@ -127,7 +122,7 @@ export default function BookCallGraphic() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="flex items-center gap-1"
+                  className="flex items-center justify-center gap-1 w-full"
                 >
                   <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
                     <path d="M10 3L4.5 8.5L2 6" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -140,6 +135,7 @@ export default function BookCallGraphic() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
+                  className="w-full text-center"
                 >
                   Schedule
                 </motion.span>
@@ -155,7 +151,7 @@ export default function BookCallGraphic() {
             backgroundColor: activeRow === 3 ? "#2A2A2A" : "#1E1E1E",
             scale: activeRow === 3 ? 1.02 : 1,
           }}
-          className="w-[160px] border rounded-[10px] p-[8px_12px] flex flex-col gap-1.5 transition-all duration-500 shadow-lg"
+          className="w-[80%] max-w-[160px] border rounded-[10px] p-[8px_12px] flex flex-col gap-1.5 transition-all duration-500 shadow-lg"
         >
           <span className="text-[#B3B3B3] font-display text-sm font-medium">24/7 reply</span>
           <div className="h-2 w-full bg-[#2E2E2E] rounded-full overflow-hidden">
@@ -167,7 +163,7 @@ export default function BookCallGraphic() {
             />
           </div>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Animated Cursor - FORCED VISIBILITY */}
       <motion.div

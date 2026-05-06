@@ -28,17 +28,24 @@ export default function LaunchGraphic() {
   const badgeLeft = useTransform(progress, (latest) => `${latest}%`);
 
   return (
-    <div className="relative w-full aspect-[303/276] rounded-2xl overflow-hidden bg-[#0F0F0F] border border-white/5 shadow-2xl flex flex-col items-center justify-center p-8">
+    <div className="relative w-full aspect-[303/276] overflow-hidden bg-[#0F0F0F] flex flex-col items-center justify-center">
+      {/* Background SVG Overlay */}
+      <img
+        src="/assets/others/launch bg.svg"
+        className="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none p-2 rounded-3xl"
+        alt=""
+      />
+      
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-blue-500/5 blur-[100px] rounded-full" />
       
-      <div className="relative z-10 w-full flex flex-col gap-3">
+      <motion.div className="relative z-10 w-full flex flex-col gap-2 scale-[0.85] sm:scale-100 origin-center px-6 md:px-12">
         
         {/* Synced Percentage Circle */}
         <div className="relative h-14 w-full">
           <motion.div 
             style={{ left: badgeLeft, x: "-50%" }}
-            className="absolute top-0 w-14 h-14 bg-[#1A1A1A] rounded-full border border-white/10 flex items-center justify-center shadow-2xl backdrop-blur-sm"
+            className="absolute top-0 w-14 h-10 bg-[#1A1A1A] rounded-[100px] border border-white/10 flex items-center justify-center shadow-2xl backdrop-blur-sm"
           >
             <span className="text-white font-display text-sm font-bold tabular-nums">
               {displayProgress}%
@@ -71,7 +78,7 @@ export default function LaunchGraphic() {
           />
           <span className="text-[#B3B3B3] font-display text-sm font-medium tracking-tight">Please wait...</span>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

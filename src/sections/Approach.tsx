@@ -13,12 +13,12 @@ export default function Approach() {
       </p>
 
       {/* cards container: stacked on mobile, scroll on tablet (md), centered on desktop (lg) */}
-      <div className="mt-12 md:mt-16 flex flex-col items-center justify-center gap-10 md:flex-row md:overflow-x-auto md:no-scrollbar md:gap-6 md:pb-8 md:snap-x md:snap-mandatory md:px-4 lg:px-0 lg:justify-center lg:overflow-visible">
+      <div className="mt-12 md:mt-16 flex flex-col items-center justify-start gap-10 md:flex-row md:overflow-x-auto md:no-scrollbar md:gap-6 md:pb-8 md:snap-x md:snap-mandatory px-8 md:px-12 lg:px-0 lg:justify-center lg:overflow-visible w-full">
         
         {/* Card 1: Book a call */}
-        <div className="bg-[#111111] w-full max-w-[calc(100vw-32px)] sm:max-w-[340px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto sm:mx-0">
+        <div className="bg-[#111111] w-full max-w-[329px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] overflow-hidden flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto md:mx-0">
           <BookCallGraphic />
-          <div className="flex flex-col items-start px-4 pb-8">
+          <div className="flex flex-col items-start px-6 pb-8">
             <h3 className="font-display font-medium text-xl text-white">Book a call</h3>
             <p className="text-[#B3B3B3] font-display font-normal text-sm md:text-base mt-1.5 leading-relaxed">
               We understand what you’re building
@@ -27,9 +27,9 @@ export default function Approach() {
         </div>
 
         {/* Card 2: Design & build */}
-        <div className="bg-[#111111] w-full max-w-[calc(100vw-32px)] sm:max-w-[340px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto sm:mx-0">
+        <div className="bg-[#111111] w-full max-w-[329px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] overflow-hidden flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto md:mx-0">
           <DesignBuildGraphic />
-          <div className="flex flex-col items-start px-4 pb-8">
+          <div className="flex flex-col items-start px-6 pb-8">
             <h3 className="font-display font-medium text-xl text-white">Design & build</h3>
             <p className="text-[#B3B3B3] font-display font-normal text-sm md:text-base mt-1.5 leading-relaxed">
               Clear execution, no guesswork
@@ -38,9 +38,9 @@ export default function Approach() {
         </div>
 
         {/* Card 3: Launch */}
-        <div className="bg-[#111111] w-full max-w-[calc(100vw-32px)] sm:max-w-[340px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto sm:mx-0">
+        <div className="bg-[#111111] w-full max-w-[329px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] overflow-hidden flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto md:mx-0">
           <LaunchGraphic />
-          <div className="flex flex-col items-start px-4 pb-8">
+          <div className="flex flex-col items-start px-6 pb-8">
             <h3 className="font-display font-medium text-xl text-white">Launch</h3>
             <p className="text-[#B3B3B3] font-display font-normal text-sm md:text-base mt-1.5 leading-relaxed">
               Ready to ship, ready to scale
