@@ -25,30 +25,34 @@ export default function LaunchGraphic() {
     };
   }, [progress, rounded]);
 
+  const badgeLeft = useTransform(progress, (latest) => `${latest}%`);
+
   return (
     <div className="relative w-full aspect-[303/276] rounded-2xl overflow-hidden bg-[#0F0F0F] border border-white/5 shadow-2xl flex flex-col items-center justify-center p-8">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-blue-500/5 blur-[100px] rounded-full" />
       
-      <div className="relative z-10 w-full flex flex-col gap-8">
-        {/* Progress Badge */}
-        <div className="flex justify-center">
-          <div className="bg-[#1A1A1A] px-5 py-2.5 rounded-[20px] border border-white/5 min-w-[80px] flex justify-center shadow-xl">
-            <span className="text-white font-display text-base font-bold tabular-nums">
+      <div className="relative z-10 w-full flex flex-col gap-3">
+        
+        {/* Synced Percentage Circle */}
+        <div className="relative h-14 w-full">
+          <motion.div 
+            style={{ left: badgeLeft, x: "-50%" }}
+            className="absolute top-0 w-14 h-14 bg-[#1A1A1A] rounded-full border border-white/10 flex items-center justify-center shadow-2xl backdrop-blur-sm"
+          >
+            <span className="text-white font-display text-sm font-bold tabular-nums">
               {displayProgress}%
             </span>
-          </div>
+          </motion.div>
         </div>
 
         {/* Progress Bar Container */}
         <div className="relative h-[54px] w-full bg-[#161616] rounded-full border border-white/10 p-1 shadow-[inset_0_2px_10px_rgba(0,0,0,0.5)]">
           <motion.div 
-            style={{ width: progress.get() + "%" }}
-            animate={{ width: displayProgress + "%" }}
-            transition={{ type: "spring", bounce: 0, duration: 0.1 }}
+            style={{ width: badgeLeft }}
             className="h-full bg-gradient-to-b from-white to-[#666666] rounded-full flex items-center justify-end"
           >
-            {/* Thumb Container */}
+            {/* Thumb Container - UNTOUCHED */}
             <div className="h-full aspect-square p-1">
               <div className="h-full w-full bg-[#0F0F0F] rounded-full flex items-center justify-center border border-white/10 shadow-lg">
                 {/* Inner Thumb Dot */}

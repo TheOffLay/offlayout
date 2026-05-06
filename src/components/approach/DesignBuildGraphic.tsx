@@ -1,81 +1,119 @@
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect } from "react";
 
 const icons = [
-  { src: "/assets/others/framer.svg", id: "framer" },
-  { src: "/assets/others/chat-gpt.svg", id: "gpt" },
-  { src: "/assets/others/canvas.svg", id: "canvas" },
-  { src: "/assets/others/paint-brush-04.svg", id: "brush" },
+  { src: "/assets/others/framer.svg", id: "framer", type: "img" },
+  { src: "/assets/others/chat-gpt.svg", id: "gpt", type: "img" },
+  { src: "/assets/others/canvas.svg", id: "canvas", type: "img" },
+  { src: "/assets/others/paint-brush-04.svg", id: "brush", type: "img" },
+  // Inline SVGs for reliability and brand relevance
+  { id: "code", type: "svg", content: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/70"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+  )},
+  { id: "ai", type: "svg", content: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/70"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
+  )},
+  { id: "node", type: "svg", content: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/70"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+  )},
+  { id: "box", type: "svg", content: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/70"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+  )},
 ];
 
 export default function DesignBuildGraphic() {
+  const glowControls = useAnimationControls();
+
+  // Sync shield glow with the staggered icon arrival
+  useEffect(() => {
+    const sequence = async () => {
+      // Small delay for initial entry
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      while (true) {
+        for (let i = 0; i < icons.length; i++) {
+          // Pulse the shield glow as each icon passes the 50% mark
+          glowControls.start({
+            opacity: [0, 0.4, 0],
+            scale: [0.8, 1.2, 0.8],
+            transition: { duration: 0.8, ease: "easeInOut" }
+          });
+          // Stagger time between icons
+          await new Promise(resolve => setTimeout(resolve, 2000));
+        }
+        // Wait before the next cycle
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+    };
+    sequence();
+  }, [glowControls]);
+
   return (
     <div className="relative w-full aspect-[303/276] rounded-2xl overflow-hidden bg-[#0F0F0F] border border-white/5 shadow-2xl">
-      {/* Background Curved Tracks */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-[-65%] left-[-10%] w-[120%] h-[100%] bg-[#1A1A1A] rounded-[100%] opacity-20 border-b border-white/10" />
-        <div className="absolute bottom-[-60%] left-[-10%] w-[120%] h-[100%] bg-[#1A1A1A] rounded-[100%] opacity-20 border-t border-white/10" />
-      </div>
+      {/* Background SVG Overlay */}
+      <img
+        src="/assets/others/design build bg.svg"
+        className="absolute inset-0 w-full h-full object-contain opacity-40 pointer-events-none"
+        alt=""
+      />
 
-      {/* Center Squeeze Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-32 bg-gradient-to-r from-transparent via-white/[0.03] to-transparent pointer-events-none" />
-
-      {/* Floating Icons (Moving in a curve) */}
+      {/* Floating Icons Sequence */}
       <div className="absolute inset-0 z-5">
-        {[0, 1, 2, 3].map((i) => {
-          const icon = icons[i % icons.length];
+        {icons.map((icon, i) => {
+          // Calculate V-shape exit Y based on index
+          // Spreading 8 icons across the height
+          const exitY = (i - 3.5) * 45; 
+          const entryY = (i % 2 === 0 ? -50 : 50);
+
           return (
             <motion.div
               key={i}
-              initial={{ x: -100, opacity: 0 }}
+              initial={{ x: -100, y: entryY, opacity: 0, scale: 0.8 }}
               animate={{
-                x: [-100, 400],
+                x: [-100, 150, 400],
+                y: [entryY, 0, exitY],
                 opacity: [0, 1, 1, 0],
+                scale: [0.8, 1.1, 0.8],
               }}
               transition={{
-                duration: 12,
+                duration: 7,
                 repeat: Infinity,
-                delay: i * 3,
-                ease: "linear",
+                delay: i * 2,
+                ease: "easeInOut",
               }}
-              className="absolute top-0 bottom-0 flex items-center"
+              className="absolute top-1/2 left-0 -translate-y-1/2"
             >
-              <motion.div
-                animate={{
-                  y: [20, -20, 20], // Sinusoidal-ish path
-                }}
-                transition={{
-                  duration: 12,
-                  repeat: Infinity,
-                  delay: i * 3,
-                  ease: "linear",
-                }}
-                className="p-2.5 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-full shadow-2xl"
-              >
-                <img src={icon.src} alt="" className="w-5 h-5 opacity-70" />
-              </motion.div>
+              <div className="p-2.5 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-full shadow-2xl flex items-center justify-center">
+                {icon.type === "img" ? (
+                  <img src={icon.src} alt="" className="w-5 h-5 opacity-70" />
+                ) : (
+                  icon.content
+                )}
+              </div>
             </motion.div>
           );
         })}
       </div>
 
-      {/* Central Figma Shield */}
+      {/* Central Figma Shield & Glow */}
       <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="relative group scale-110">
-          {/* Intense Shield Glow */}
-          {/* <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full scale-150" /> */}
-          {/* <div className="absolute -inset-4 bg-white/5 blur-xl rounded-full" /> */}
+        <div className="relative scale-110">
+          {/* Synced Glow Effect */}
+          <motion.div 
+            animate={glowControls}
+            initial={{ opacity: 0, scale: 0.8 }}
+            className="absolute inset-0 bg-white/20 blur-2xl rounded-full"
+          />
           
-          <img 
+          <motion.img 
             src="/assets/others/fig.svg" 
             alt="Figma Shield" 
-            className="w-[110px] h-[124px] relative z-10 drop-shadow-[0_0_25px_rgba(255,255,255,0.2)] transition-transform duration-500 group-hover:scale-105"
+            className="w-[110px] h-[124px] relative z-10 drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
           />
         </div>
       </div>
-      
-      {/* Top/Bottom Gradient Overlays for Depth */}
-      <div className="absolute top-0 inset-x-0 h-12 bg-gradient-to-b from-[#0F0F0F] to-transparent z-20" />
-      <div className="absolute bottom-0 inset-x-0 h-12 bg-gradient-to-t from-[#0F0F0F] to-transparent z-20" />
     </div>
   );
 }

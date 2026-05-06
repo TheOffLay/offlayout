@@ -23,19 +23,21 @@ export default function Templates() {
         className="max-w-280 2xl:max-w-318 mx-auto px-4 lg:px-6 mt-32 md:mt-40 2xl:mt-48"
         id="templates"
       >
-        <h2 className="font-display font-medium text-3xl md:text-4xl 2xl:text-5xl">
-          Templates built <br />
-          to ship faster
-        </h2>
-        <p className="text-[#B3B3B3] font-normal font-display text-xs md:text-base 2xl:text-lg mt-2 md:mt-4 leading-tight">
-          Well-structured templates made for speed, <br />
-          clarity, and real-world execution
-        </p>
+        <div className="flex flex-col items-center text-center">
+          <h2 className="font-display font-medium text-3xl md:text-4xl 2xl:text-5xl">
+            Templates built <br />
+            to ship faster
+          </h2>
+          <p className="text-[#B3B3B3] font-normal font-display text-xs md:text-base 2xl:text-lg mt-2 md:mt-4 leading-tight">
+            Well-structured templates made for speed, <br />
+            clarity, and real-world execution
+          </p>
+        </div>
 
-        {/* Template Cards - Applied the flex carousel for mobile, defaults to grid on desktop md: */}
-        <div className="mt-5 md:mt-10 flex md:grid md:grid-cols-4 gap-4 md:gap-3 overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        {/* Template Cards - Center alignment on all screens */}
+        <div className="mt-5 md:mt-10 flex md:grid md:grid-cols-4 gap-4 md:gap-3 overflow-x-auto no-scrollbar snap-x snap-mandatory justify-start md:justify-items-center">
           {templateCards.map((card) => (
-            <div key={card.id} className="snap-start shrink-0 w-68 md:w-auto">
+            <div key={card.id} className="snap-start shrink-0 w-full max-w-[calc(100vw-32px)] sm:w-68 md:w-auto mx-auto sm:mx-0">
               <div className="bg-[#1E1E1E] h-56 md:h-66 w-full rounded-2xl flex flex-col items-center justify-center">
                 {/* <div className="relative w-14 h-14 md:w-20 md:h-20 mb-3">
                   <img

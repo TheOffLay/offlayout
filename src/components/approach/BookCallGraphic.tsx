@@ -71,7 +71,14 @@ export default function BookCallGraphic() {
       />
 
       {/* Rows Container */}
-      <div className="relative z-10 flex flex-col gap-[18px] p-5 h-full justify-center items-center">
+      <div 
+        style={{ 
+          backgroundImage: "url('/assets/others/Frame 2147239363.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+        className="relative z-10 flex flex-col gap-[18px] p-5 h-full justify-center items-center"
+      >
         
         {/* Row 1: Book... */}
         <motion.div 

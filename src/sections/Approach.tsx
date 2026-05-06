@@ -12,11 +12,11 @@ export default function Approach() {
         A clear path from idea to launch.
       </p>
 
-      {/* cards */}
-      <div className="mt-12 md:mt-16 flex flex-col items-center justify-center gap-6 md:flex-row">
+      {/* cards container: stacked on mobile, scroll on tablet (md), centered on desktop (lg) */}
+      <div className="mt-12 md:mt-16 flex flex-col items-center justify-center gap-10 md:flex-row md:overflow-x-auto md:no-scrollbar md:gap-6 md:pb-8 md:snap-x md:snap-mandatory md:px-4 lg:px-0 lg:justify-center lg:overflow-visible">
         
         {/* Card 1: Book a call */}
-        <div className="bg-[#111111] w-full md:max-w-[318.67px] rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02]">
+        <div className="bg-[#111111] w-full max-w-[calc(100vw-32px)] sm:max-w-[340px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto sm:mx-0">
           <BookCallGraphic />
           <div className="flex flex-col items-start px-4 pb-8">
             <h3 className="font-display font-medium text-xl text-white">Book a call</h3>
@@ -27,7 +27,7 @@ export default function Approach() {
         </div>
 
         {/* Card 2: Design & build */}
-        <div className="bg-[#111111] w-full md:max-w-[318.67px] rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02]">
+        <div className="bg-[#111111] w-full max-w-[calc(100vw-32px)] sm:max-w-[340px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto sm:mx-0">
           <DesignBuildGraphic />
           <div className="flex flex-col items-start px-4 pb-8">
             <h3 className="font-display font-medium text-xl text-white">Design & build</h3>
@@ -38,7 +38,7 @@ export default function Approach() {
         </div>
 
         {/* Card 3: Launch */}
-        <div className="bg-[#111111] w-full md:max-w-[318.67px] rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02]">
+        <div className="bg-[#111111] w-full max-w-[calc(100vw-32px)] sm:max-w-[340px] md:w-[320px] lg:w-full lg:max-w-[318.67px] flex-shrink-0 rounded-[24px] p-2 flex flex-col gap-6 shadow-2xl transition-transform duration-300 hover:scale-[1.02] snap-center mx-auto sm:mx-0">
           <LaunchGraphic />
           <div className="flex flex-col items-start px-4 pb-8">
             <h3 className="font-display font-medium text-xl text-white">Launch</h3>

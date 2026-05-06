@@ -31,10 +31,12 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #000000;
+  overflow-x: hidden;
 }
 
 @keyframes loader-dash {
